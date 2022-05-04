@@ -36,3 +36,35 @@
     transform: rotate(360deg);
   }
 }
+
+li{
+  list-style: none;
+  text-decoration: none;
+}
+
+.dropdown {
+  display: none;
+}
+
+.show{
+  display: block;
+}
+
+.menutitle {
+  width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.menutitle span{
+  /* margin: 1rem 0 0.5rem 0; */
+  font-weight: 600;
+}
+.arrow{
+  font-weight: 700;
+}
+.buttonlogo{
+  width: 200px;
+  display: flex;
+  justify-content: space-between;
+}

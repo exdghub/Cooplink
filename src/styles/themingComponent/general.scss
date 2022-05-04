@@ -1,0 +1,51 @@
+@import "./../mixins.scss";
+@font-face {
+  font-family: "Montserrat";
+  src: url("../../assets/Montserrat/Montserrat-Italic-VariableFont_wght.ttf");
+  src: url("../../assets/Montserrat/Montserrat-VariableFont_wght.ttf"),
+    url("../../assets/Montserrat/static/Montserrat-Black.ttf"),
+    url("../../assets/Montserrat/static/Montserrat-BlackItalic.ttf"),
+    url("../../assets/Montserrat/static/Montserrat-Bold.ttf"),
+    url("../../assets/Montserrat/static/Montserrat-BoldItalic.ttf"),
+    url("../../assets/Montserrat/static/Montserrat-ExtraBold.ttf"),
+    url("../../assets/Montserrat/static/Montserrat-ExtraBoldItalic.ttf"),
+    url("../../assets/Montserrat/static/Montserrat-ExtraLight.ttf"),
+    url("../../assets/Montserrat/static/Montserrat-ExtraLightItalic.ttf"),
+    url("../../assets/Montserrat/static/Montserrat-Italic.ttf"),
+    url("../../assets/Montserrat/static/Montserrat-Light.ttf"),
+    url("../../assets/Montserrat/static/Montserrat-LightItalic.ttf"),
+    url("../../assets/Montserrat/static/Montserrat-Medium.ttf");
+}
+.color-primary {
+  @include color-primary();
+}
+
+.color-secondary {
+  @include color-secondary();
+}
+
+.color-title {
+  @include color-title();
+}
+
+.button-primary {
+  @include button-normal();
+  @include color-white();
+}
+
+.main-header {
+  @include main-header();
+  @include color-title();
+}
+.secondary-header {
+  @include secondary-header();
+  @include color-title();
+}
+
+.secondary-text {
+  @include secondary-text();
+}
+
+.sub-text {
+  @include sub-text();
+}

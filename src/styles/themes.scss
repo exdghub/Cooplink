@@ -1,0 +1,35 @@
+@import "variables.scss";
+
+$theme-ncbl: (
+  "primaryColor": $colorPrimary,
+  "secondaryColor": $colorSecondary,
+  "titleColor": $colorBlack,
+  "errorColor": $colorError,
+  "warningColor": $colorWarning,
+  "grayColor": $colorGray,
+  "whiteColor": $colorWhite,
+
+  "primaryText": $primaryText,
+  "secondaryText": $secondaryText,
+  "subText": $subText,
+
+  "maxWidth": $maxWidth,
+  
+  "btnHeight": $btnHeight,
+
+  "mainHeader": $mainHeader,
+  "secondaryHeader": $secondaryHeader,
+
+  "fw-500": $fw-500,
+  "fw-600": $fw-600,
+  "fw-700": $fw-700,
+  "fw-800": $fw-800,
+);
+
+// $theme-text: (
+//   "primaryColor": $colorGray,
+//   "secondaryColor": $colorGray,
+//   "errorColor": #ffc107,
+//   "warningColor": #111111
+  
+// );

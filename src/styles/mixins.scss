@@ -1,0 +1,39 @@
+@import "themes.scss";
+$useTheme: $theme-ncbl;
+
+///////colors
+@mixin color-primary {
+  color: map-get($useTheme, "primaryColor");
+}
+@mixin color-secondary {
+  color: map-get($useTheme, "secondaryColor");
+}
+@mixin color-white {
+  color: map-get($useTheme, "whiteColor");
+}
+@mixin color-title {
+  color: map-get($useTheme, "titleColor");
+}
+
+///////fonts
+@mixin secondary-text {
+  font-size: map-get($useTheme, "secondaryText");
+}
+@mixin sub-text {
+  font-size: map-get($useTheme, "subText");
+}
+@mixin main-header {
+  font-size: map-get($useTheme, "mainHeader");
+}
+@mixin secondary-header {
+  font-size: map-get($useTheme, "secondaryHeader");
+}
+
+///////functions
+@mixin button-normal {
+  width: map-get($useTheme, "maxWidth");
+  height: map-get($useTheme, "btnHeight");
+  border-radius: 8px;
+  border: none;
+  background-color: map-get($useTheme, "primaryColor");
+}
