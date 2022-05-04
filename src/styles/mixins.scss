@@ -14,7 +14,12 @@ $useTheme: $theme-ncbl;
 @mixin color-title {
   color: map-get($useTheme, "titleColor");
 }
-
+@mixin color-border{
+  color: map-get($useTheme, "colorGray");
+}
+@mixin main-gradient{
+  background: map-get($useTheme, "mainGradient" );
+}
 ///////fonts
 @mixin secondary-text {
   font-size: map-get($useTheme, "secondaryText");
@@ -22,11 +27,14 @@ $useTheme: $theme-ncbl;
 @mixin sub-text {
   font-size: map-get($useTheme, "subText");
 }
-@mixin main-header {
-  font-size: map-get($useTheme, "mainHeader");
+@mixin main-title {
+  font-size: map-get($useTheme, "mainTitle");
 }
-@mixin secondary-header {
-  font-size: map-get($useTheme, "secondaryHeader");
+@mixin secondary-title {
+  font-size: map-get($useTheme, "secondaryTitle");
+}
+@mixin fw-600 {
+  font-weight: map-get($useTheme, "fw-600" );
 }
 
 ///////functions
@@ -36,4 +44,11 @@ $useTheme: $theme-ncbl;
   border-radius: 8px;
   border: none;
   background-color: map-get($useTheme, "primaryColor");
+}
+@mixin button-small {
+  border-radius: 6px;
+  border: none;
+  background-color: map-get($useTheme, "primaryColor");
+  width: map-get($useTheme, "btnSmWidth" );
+  height: map-get($useTheme, "btnSmHeight" );
 }

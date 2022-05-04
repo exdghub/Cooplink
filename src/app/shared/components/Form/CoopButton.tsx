@@ -1,11 +1,17 @@
 import React from "react";
 import "../../../../styles/themingComponent/formElement.scss" 
 
-export default function CoopButton() {
+interface ButtonProps{
+  btnName?: string;
+  className?: string;
+}
+
+export default function CoopButton(props: ButtonProps) {
+  const {btnName, className} = props
   return (
     <>
-      <button className="button-primary">
-        Login
+      <button className={`${className}`}>
+        {btnName}
       </button>
     </>
   );

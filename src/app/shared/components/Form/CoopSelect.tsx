@@ -1,18 +1,23 @@
 import React from "react";
 import "../../../../styles/themingComponent/formElement.scss";
-interface SelectProps{
+interface SelectProps {
   text?: string;
   value?: string;
   label?: string;
 }
 
 export default function CoopSelect(props: SelectProps) {
-  const {text, value, label} = props
+  const { text, value, label } = props;
   return (
     <>
       <div className="form-group mb-3">
-        <label className="form-label px-2" htmlFor="formSelect">{label}</label>
-        <select className="form-control form-select" id="formSelect" >
+        <label className="form-label px-2 secondary-text" htmlFor="formSelect">
+          {label}
+        </label>
+        <select
+          className="form-control form-select secondary-text"
+          id="formSelect"
+        >
           <option>1</option>
           <option>2</option>
           <option>3</option>

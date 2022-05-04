@@ -10,19 +10,23 @@ export default function Login(props: any) {
   return (
     <>
       <div className={styles.login_wrapper}>
-        <div className={`col-6 d-none d-sm-none d-md-block ${styles["login-left"]}`}>
-          <h2 className={`main-header`}>Let's Enter to New World</h2>
+        <div
+          className={`col-6 d-none d-sm-none d-md-block main-gradient ${styles["login-left"]}`}
+        >
+          <h2 className={`main-title`}>Let's Enter to New World</h2>
           <p className={`secondary-text`}>
             is simple a dummy text of the printing typesetting industry. Lorem
             ispusm has been
           </p>
         </div>
 
-        <div className={`col-sm-12 col-md-6 px-md-3 px-lg-5 py-md-3 py-lg-5  ${styles["login-right"]} `}>
+        <div
+          className={`col-sm-12 col-md-6 px-md-3 px-lg-5 py-md-3 py-lg-5 ${styles["login-right"]} `}
+        >
           <h3 className={`secondary-header`}>Welcome</h3>
           <p className={`secondary-text`}>
-            By continuing you agree to our{" "}
-            <span className={"color-primary"}>User Agreement</span> and{" "}
+            By continuing you agree to our
+            <span className={"color-primary"}>User Agreement</span> and
             <span className={"color-primary"}>Privacy policy</span>.
           </p>
 
@@ -42,10 +46,18 @@ export default function Login(props: any) {
 
             <div className={`${styles["login-bottom"]}`}>
               <CoopCheck label={"Remember my username"} />
-              <Link to={"#"} className={`sub-text`}>Forgot Password?</Link>
+              <Link
+                to={"#"}
+                className={`sub-text text-decoration-none color-primary`}
+              >
+                Forgot Password?
+              </Link>
             </div>
 
-            <CoopButton />
+            <CoopButton
+              btnName={"Login"}
+              className={"text-uppercase button-primary"}
+            />
           </div>
         </div>
       </div>
