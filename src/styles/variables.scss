@@ -6,13 +6,14 @@ $colorBlack: #25282B;
 $colorError : #DC121C;
 $colorWarning : #FEAF13;
 $colorGray: #8D8D8D;
+$colorFooter: #F7FCF9;
 
 $mainGradient: transparent linear-gradient(180deg, #2ABE560F 0%, #E1F5EA14 54%, #FFFFFF57 100%) 0% 0% no-repeat padding-box;
 
 $mainTitle: 38px;
 $secondaryTitle: 32px;
-$primaryHeader: 50px;
-
+$primaryHeader: 58px;
+$subHeader: 48px;
 
 $primaryText: 16px;
 $secondaryText: 14px;
@@ -23,6 +24,7 @@ $btnSmWidth: 100px;
 
 $btnHeight: 45px;
 $btnSmHeight: 32px;
+$btnMdHeight: 42px;
 
 $fw-500: 500;
 $fw-600: 600;

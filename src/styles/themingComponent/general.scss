@@ -28,6 +28,9 @@
 .color-border{
   @include color-border();
 }
+.bgcolor-footer{
+  @include bgcolor-footer();
+}
 .main-gradient{
   @include main-gradient()
 }
@@ -42,14 +45,25 @@
   @include color-white();
 }
 
+.button-main {
+  @include button-main();
+  @include color-white();
+}
+
 .main-title {
   @include main-title();
-  @include color-title();
 }
 .secondary-title {
   @include secondary-title();
-  @include color-title();
 }
+
+.primary-header {
+  @include primary-header();
+}
+.sub-header{
+  @include sub-header();
+}
+
 .fw-600{
   @include fw-600();
 }
