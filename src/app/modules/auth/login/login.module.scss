@@ -1,0 +1,24 @@
+.login_wrapper {
+  justify-content: space-between;
+  display: flex;
+}
+
+.login-bottom {
+  display: flex;
+  justify-content: space-between;
+}
+
+.login-left {
+  // background-color: rgb(226, 255, 241);
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  padding: 40px;
+}
+
+.login-right {
+  // padding: 50px 40px;
+}
+
+.login-form {
+  margin-bottom: 10px;
+}

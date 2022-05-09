@@ -1,0 +1,91 @@
+@import "./mixins";
+@font-face {
+  font-family: "Montserrat";
+  src: url("../../assets/fonts/Montserrat/Montserrat-Italic-VariableFont_wght.ttf");
+  src: url("../../assets/fonts/Montserrat/Montserrat-VariableFont_wght.ttf"),
+    url("../../assets/fonts/Montserrat/static/Montserrat-Black.ttf"),
+    url("../../assets/fonts/Montserrat/static/Montserrat-BlackItalic.ttf"),
+    url("../../assets/fonts/Montserrat/static/Montserrat-Bold.ttf"),
+    url("../../assets/fonts/Montserrat/static/Montserrat-BoldItalic.ttf"),
+    url("../../assets/fonts/Montserrat/static/Montserrat-ExtraBold.ttf"),
+    url("../../assets/fonts/Montserrat/static/Montserrat-ExtraBoldItalic.ttf"),
+    url("../../assets/fonts/Montserrat/static/Montserrat-ExtraLight.ttf"),
+    url("../../assets/fonts/Montserrat/static/Montserrat-ExtraLightItalic.ttf"),
+    url("../../assets/fonts/Montserrat/static/Montserrat-Italic.ttf"),
+    url("../../assets/fonts/Montserrat/static/Montserrat-Light.ttf"),
+    url("../../assets/fonts/Montserrat/static/Montserrat-LightItalic.ttf"),
+    url("../../assets/fonts/Montserrat/static/Montserrat-Medium.ttf");
+}
+.color-primary {
+  @include color-primary();
+}
+.color-secondary {
+  @include color-secondary();
+}
+.color-title {
+  @include color-title();
+}
+.color-nav-title {
+  @include color-nav-title();
+}
+.color-border {
+  @include color-border();
+}
+.bgcolor-primary {
+  @include bgcolor-primary();
+}
+.main-gradient {
+  @include main-gradient();
+}
+.secondary-gradient {
+  @include secondary-gradient();
+}
+
+.button-primary {
+  @include button-normal();
+  @include color-white();
+}
+
+.button-small {
+  @include button-small();
+  @include color-white();
+}
+
+.button-main {
+  @include button-main();
+  @include color-white();
+}
+
+.main-title {
+  @include main-title();
+}
+.secondary-title {
+  @include secondary-title();
+}
+
+.primary-header {
+  @include primary-header();
+}
+.sub-header {
+  @include sub-header();
+}
+
+.fw-600 {
+  @include fw-600();
+}
+
+.primary-text {
+  @include primary-text();
+}
+
+.secondary-text {
+  @include secondary-text();
+}
+
+.main-text {
+  @include main-text();
+}
+
+.sub-text {
+  @include sub-text();
+}

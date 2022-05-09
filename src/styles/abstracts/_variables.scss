@@ -1,0 +1,45 @@
+$colorPrimary: #006633;
+$colorSecondary: #b9b9b9;
+$colorWhite: #ffffff;
+
+$colorBlack-shade1: #25282b;
+$colorBlock-shade2: #23263b;
+
+$colorError: #dc121c;
+$colorWarning: #feaf13;
+$colorGray: #8d8d8d;
+$colorFooter: #f7fcf9;
+
+$mainGradient: transparent
+  linear-gradient(180deg, #2abe560f 0%, #e1f5ea14 54%, #ffffff57 100%) 0% 0%
+  no-repeat padding-box;
+$secondaryGradient: transparent
+  linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 1) 0%,
+    #f4fcf6 3%,
+    #f4fcf6 97%,
+    rgba(255, 255, 255, 1) 100%
+  );
+
+$mainTitle: 38px;
+$secondaryTitle: 32px;
+$primaryHeader: 58px;
+$subHeader: 48px;
+
+$mainText: 18px;
+$primaryText: 16px;
+$secondaryText: 14px;
+$subText: 12px;
+
+$maxWidth: 100%;
+$btnSmWidth: 100px;
+
+$btnHeight: 45px;
+$btnSmHeight: 32px;
+$btnMdHeight: 42px;
+
+$fw-500: 500;
+$fw-600: 600;
+$fw-700: 700;
+$fw-800: 800;

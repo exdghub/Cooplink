@@ -1,0 +1,14 @@
+@import "../abstracts/mixins";
+
+.custom-navlink {
+  @include color-nav-title();
+  @include custom-navlink();
+  @include sub-text();
+  @include fw-500();
+}
+
+.custom-navlink.active {
+  @include color-primary();
+  @include custom-navlink();
+  @include fw-700();
+}

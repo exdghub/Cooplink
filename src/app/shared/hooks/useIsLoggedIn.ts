@@ -10,7 +10,7 @@ const useIsLoggedIn = (): LoginReturn => {
 
   useEffect(() => {
     // setTimeout(() => {
-      setIsLoggedIn(false);
+    setIsLoggedIn(false);
     // }, 3000);
   }, []);
 

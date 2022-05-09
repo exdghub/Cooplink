@@ -1,0 +1,96 @@
+@import "../themes/ncbl.scss";
+$useTheme: $theme-ncbl;
+
+///////colors
+@mixin color-primary {
+  color: map-get($useTheme, "primaryColor") !important;
+}
+@mixin color-secondary {
+  color: map-get($useTheme, "secondaryColor");
+}
+@mixin color-white {
+  color: map-get($useTheme, "whiteColor");
+}
+@mixin color-title {
+  color: map-get($useTheme, "primaryTitleColor");
+}
+@mixin color-nav-title {
+  color: map-get($useTheme, "navTitleColor") !important;
+}
+
+@mixin color-border {
+  color: map-get($useTheme, "colorGray");
+}
+@mixin bgcolor-primary {
+  background-color: map-get($useTheme, "footerColor");
+}
+@mixin main-gradient {
+  background: map-get($useTheme, "mainGradient");
+}
+@mixin secondary-gradient {
+  background: map-get($useTheme, "secondaryGradient");
+}
+
+///////fonts
+@mixin primary-text {
+  font-size: map-get($useTheme, "primaryText");
+}
+@mixin secondary-text {
+  font-size: map-get($useTheme, "secondaryText");
+}
+@mixin sub-text {
+  font-size: map-get($useTheme, "subText");
+}
+@mixin main-text {
+  font-size: map-get($useTheme, "mainText");
+}
+@mixin main-title {
+  font-size: map-get($useTheme, "mainTitle");
+}
+@mixin secondary-title {
+  font-size: map-get($useTheme, "secondaryTitle");
+}
+@mixin primary-header {
+  font-size: map-get($useTheme, "primaryHeader");
+}
+@mixin sub-header {
+  font-size: map-get($useTheme, "subHeader");
+}
+
+@mixin fw-500 {
+  font-weight: map-get($useTheme, "fw-500");
+}
+@mixin fw-600 {
+  font-weight: map-get($useTheme, "fw-600");
+}
+@mixin fw-700 {
+  font-weight: map-get($useTheme, "fw-700");
+}
+
+///////functions
+@mixin button-normal {
+  width: map-get($useTheme, "maxWidth");
+  height: map-get($useTheme, "btnHeight");
+  border-radius: 8px;
+  border: none;
+  background-color: map-get($useTheme, "primaryColor");
+}
+@mixin button-small {
+  border-radius: 6px;
+  border: none;
+  background-color: map-get($useTheme, "primaryColor");
+  width: map-get($useTheme, "btnSmWidth");
+  height: map-get($useTheme, "btnSmHeight");
+}
+
+@mixin button-main {
+  border-radius: 25px;
+  border: none;
+  background-color: map-get($useTheme, "primaryColor");
+  height: map-get($useTheme, "btnMdHeight");
+}
+
+@mixin custom-navlink {
+  text-transform: uppercase;
+  background-color: transparent !important;
+}

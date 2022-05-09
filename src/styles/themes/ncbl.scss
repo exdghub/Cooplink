@@ -1,0 +1,46 @@
+@import "../abstracts/variables";
+
+$theme-ncbl: (
+  "primaryColor": $colorPrimary,
+  "secondaryColor": $colorSecondary,
+  "primaryTitleColor": $colorBlack-shade1,
+  "navTitleColor": $colorBlock-shade2,
+  "errorColor": $colorError,
+  "warningColor": $colorWarning,
+  "grayColor": $colorGray,
+  "whiteColor": $colorWhite,
+  "footerColor": $colorFooter,
+
+  "mainGradient": $mainGradient,
+  "secondaryGradient": $secondaryGradient,
+
+  "primaryText": $primaryText,
+  "secondaryText": $secondaryText,
+  "subText": $subText,
+  "mainText": $mainText,
+
+  "maxWidth": $maxWidth,
+  "btnSmWidth": $btnSmWidth,
+  "btnHeight": $btnHeight,
+  "btnSmHeight": $btnSmHeight,
+  "btnMdHeight": $btnMdHeight,
+
+  "mainTitle": $mainTitle,
+  "secondaryTitle": $secondaryTitle,
+
+  "primaryHeader": $primaryHeader,
+  "subHeader": $subHeader,
+
+  "fw-500": $fw-500,
+  "fw-600": $fw-600,
+  "fw-700": $fw-700,
+  "fw-800": $fw-800,
+);
+
+// $theme-text: (
+//   "primaryColor": $colorGray,
+//   "secondaryColor": $colorGray,
+//   "errorColor": #ffc107,
+//   "warningColor": #111111
+
+// );
