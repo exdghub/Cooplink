@@ -70,7 +70,7 @@ export default function LandingPageLayout() {
           <About />
         </div>
       </div>
-      <Footer/>
+      <Footer />
 
       <div
         className={`modal fade ${styles["custom-modal"]}`}

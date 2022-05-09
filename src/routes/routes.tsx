@@ -3,7 +3,7 @@ import { Route, Routes } from "react-router-dom";
 import About from "../app/landingPage/aboutComponent/about.component";
 import Home from "../app/landingPage/homeComponent/home.component";
 import LandingPageLayout from "../app/landingPage/landingPage.module";
-import Login from "../app/loginModule/login.module";
+// import Login from "../app/loginModule/login.module";
 
 export default function RoutePage() {
   return (
