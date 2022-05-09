@@ -17,16 +17,15 @@
     "jsx": "react-jsx",
     "baseUrl": "./src",
     "paths": {
-      "@/*": ["./src/*"],
-      "modules": ["app/modules"],
-      "modules/*": ["app/modules/*"],
-      "core": ["app/core"],
-      "core/*": ["app/core/*"],
-      "shared": ["app/shared"],
-      "shared/*": ["app/shared/*"],
-      "assets": ["src/assets"],
-      "assets/*": ["src/assets/*"]
+      "modules": ["./app/modules"],
+      "modules/*": ["./app/modules/*"],
+      "core": ["./app/core"],
+      "core/*": ["./app/core/*"],
+      "shared": ["./app/shared"],
+      "shared/*": ["./app/shared/*"],
+      "assets": ["./assets"],
+      "assets/*": ["./assets/*"]
     }
   },
-  "include": ["src", "src/menusItems.js"]
+  "exclude": ["node_modules/**/*"]
 }

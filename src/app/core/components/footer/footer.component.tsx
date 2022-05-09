@@ -5,8 +5,6 @@ import styles from "./footer.module.scss";
 import { footerProps } from "./footer.types";
 import FooterLink from "./footerLink/footerLink.component";
 
-
-
 export default function Footer(props: footerProps) {
   return (
     <>
@@ -34,7 +32,8 @@ export default function Footer(props: footerProps) {
             {/* <Copyright /> */}
           </div>
         </div>
-      </section>
+      </section>import about from @app/shared/
+
     </>
   );
 }
