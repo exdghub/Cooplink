@@ -66,7 +66,7 @@ export default function LandingPageLayout() {
           <Services />
         </div>
 
-        <div id="aboutScrollSpy" className="container-fluid">
+        <div id="aboutScrollSpy" className="">
           <About />
         </div>
       </div>

@@ -27,6 +27,10 @@ $useTheme: $theme-ncbl;
 @mixin main-gradient{
   background: map-get($useTheme, "mainGradient" );
 }
+@mixin secondary-gradient {
+  background: map-get($useTheme, "secondaryGradient" );  
+}
+
 ///////fonts
 @mixin primary-text {
   font-size: map-get($useTheme, "primaryText");
@@ -36,6 +40,9 @@ $useTheme: $theme-ncbl;
 }
 @mixin sub-text {
   font-size: map-get($useTheme, "subText");
+}
+@mixin main-text {
+  font-size: map-get($useTheme, "mainText");
 }
 @mixin main-title {
   font-size: map-get($useTheme, "mainTitle");

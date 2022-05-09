@@ -37,6 +37,9 @@
 .main-gradient{
   @include main-gradient()
 }
+.secondary-gradient{
+  @include secondary-gradient();
+}
 
 .button-primary {
   @include button-normal();
@@ -77,6 +80,10 @@
 
 .secondary-text {
   @include secondary-text();
+}
+
+.main-text {
+  @include main-text();
 }
 
 .sub-text {
