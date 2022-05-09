@@ -1,9 +1,14 @@
 import styles from "./landingPage.module.scss";
+
+import HowItWorks from "./components/howItWorks/howItWorks.component";
 import Home from "./components/home/home.component";
-import Login from "../../../modules/auth/login/login.module";
 import Services from "./components/services/services.component";
 import About from "./components/about/about.component";
-import Footer from "../../components/footer/footer.component";
+import Login from "modules/auth/login/login.module";
+import Footer from "core/components/footer/footer.component";
+
+
+
 
 export default function LandingPageLayout() {
   return (
@@ -32,7 +37,7 @@ export default function LandingPageLayout() {
             </a>
           </span>
           <span className="px-2">
-            <a className={`nav-link custom-navlink`} href="#aboutScrollSpy">
+            <a className={`nav-link custom-navlink`} href="#worksScrollSpy">
               How it works
             </a>
           </span>
@@ -42,6 +47,7 @@ export default function LandingPageLayout() {
             </a>
           </span>
         </div>
+
         <button
           className={`button-small mx-2 text-uppercase position-absolute ${styles["button-right"]}`}
           data-bs-toggle="modal"
@@ -69,6 +75,10 @@ export default function LandingPageLayout() {
         <div id="aboutScrollSpy" className="">
           <About />
         </div>
+
+        <div id="worksScrollSpy" className="">
+          <HowItWorks />
+        </div>
       </div>
       <Footer />
 
@@ -79,7 +89,7 @@ export default function LandingPageLayout() {
         aria-labelledby="loginModalLabel"
         aria-hidden="true"
       >
-        <div className="modal-dialog modal-lg">
+        <div className="modal-dialog modal-dialog-centered modal-lg">
           <div className={`modal-content ${styles["login-modal-content"]} `}>
             <button
               type="button"

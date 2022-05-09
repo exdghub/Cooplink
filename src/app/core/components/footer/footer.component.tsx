@@ -1,5 +1,5 @@
 import React from "react";
-import SocialMedia from "../../../shared/components/socialMedia/socialMedia";
+import SocialMedia from "shared/components/socialMedia/socialMedia";
 import { company, developers, support } from "./footer.data";
 import styles from "./footer.module.scss";
 import { footerProps } from "./footer.types";

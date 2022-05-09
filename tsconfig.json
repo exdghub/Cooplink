@@ -1,11 +1,7 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
@@ -18,9 +14,19 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "baseUrl": "./src",
+    "paths": {
+      "@/*": ["./src/*"],
+      "modules": ["app/modules"],
+      "modules/*": ["app/modules/*"],
+      "core": ["app/core"],
+      "core/*": ["app/core/*"],
+      "shared": ["app/shared"],
+      "shared/*": ["app/shared/*"],
+      "assets": ["src/assets"],
+      "assets/*": ["src/assets/*"]
+    }
   },
-  "include": [
-    "src"
-, "src/menusItems.js"  ]
+  "include": ["src", "src/menusItems.js"]
 }

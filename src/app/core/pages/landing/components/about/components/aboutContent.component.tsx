@@ -1,5 +1,5 @@
 import React from "react";
-import CoopButton from "../../../../../../shared/components/form/button/button.component";
+import CoopButton from "shared/components/form/button/button.component";
 import { AboutContentProps } from "./aboutContent.types";
 
 

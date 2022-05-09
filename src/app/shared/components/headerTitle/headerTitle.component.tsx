@@ -9,9 +9,9 @@ export default function HeaderTitle(props: TitleProps) {
   return (
     <>
       <div>
-        <h2 className={`main-title text-center ${styles["headerText"]}`}>
+        <h2 className={`main-title text-center  ${className} ${styles["headerText"]}`}>
           {titleText}
-          <span className={`color-primary ${className}`}>{colorText}</span>
+          <span className={`color-primary`}>{colorText}</span>
         </h2>
 
         {subTitle ?
