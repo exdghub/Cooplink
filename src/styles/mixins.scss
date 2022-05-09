@@ -3,7 +3,7 @@ $useTheme: $theme-ncbl;
 
 ///////colors
 @mixin color-primary {
-  color: map-get($useTheme, "primaryColor");
+  color: map-get($useTheme, "primaryColor") !important;
 }
 @mixin color-secondary {
   color: map-get($useTheme, "secondaryColor");
@@ -12,18 +12,25 @@ $useTheme: $theme-ncbl;
   color: map-get($useTheme, "whiteColor");
 }
 @mixin color-title {
-  color: map-get($useTheme, "titleColor");
+  color: map-get($useTheme, "primaryTitleColor");
 }
+@mixin color-nav-title {
+  color: map-get($useTheme, "navTitleColor") !important;
+}
+
 @mixin color-border{
   color: map-get($useTheme, "colorGray");
 }
-@mixin bgcolor-footer{
+@mixin bgcolor-primary{
   background-color: map-get($useTheme, "footerColor");
 }
 @mixin main-gradient{
   background: map-get($useTheme, "mainGradient" );
 }
 ///////fonts
+@mixin primary-text {
+  font-size: map-get($useTheme, "primaryText");
+}
 @mixin secondary-text {
   font-size: map-get($useTheme, "secondaryText");
 }
@@ -43,9 +50,16 @@ $useTheme: $theme-ncbl;
   font-size: map-get($useTheme, "subHeader");
 }
 
+@mixin fw-500 {
+  font-weight: map-get($useTheme, "fw-500" );
+}
 @mixin fw-600 {
   font-weight: map-get($useTheme, "fw-600" );
 }
+@mixin fw-700 {
+  font-weight: map-get($useTheme, "fw-700" );
+}
+
 
 ///////functions
 @mixin button-normal {
@@ -68,4 +82,9 @@ $useTheme: $theme-ncbl;
   border: none;
   background-color: map-get($useTheme, "primaryColor");
   height: map-get($useTheme, "btnMdHeight" );
+}
+
+@mixin custom-navlink {
+  text-transform: uppercase;
+  background-color: transparent !important;
 }

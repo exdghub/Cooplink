@@ -5,8 +5,9 @@ import { BrowserRouter } from "react-router-dom";
 import RoutePage from "./routes/routes";
 import Footer from "./app/core/components/Footer/footer";
 import Header from "./app/core/components/Header/header";
-import Login from "./app/LoginModule/login.module";
+import Login from "./app/loginModule/login.module";
 import useIsLoggedIn from "./app/shared/hooks/useIsLoggedIn";
+import LandingPageLayout from "./app/landingPage/landingPage.module";
 
 function App() {
 
@@ -16,13 +17,13 @@ function App() {
     <>
       {isLoggedIn ? (
         <BrowserRouter>
-          <Login />
-        </BrowserRouter>
+        <Header />
+        <RoutePage />
+        <Footer />
+      </BrowserRouter>
       ) : (
         <BrowserRouter>
-          <Header />
-          <RoutePage />
-          <Footer />
+         <LandingPageLayout />
         </BrowserRouter>
       )}
     </>

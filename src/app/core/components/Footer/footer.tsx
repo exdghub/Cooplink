@@ -1,5 +1,5 @@
 import React from "react";
-import SocialMedia from "../../../shared/components/SocialMedia";
+import SocialMedia from "../../../shared/components/SocialMedia/SocialMedia";
 import styles from "./footer.module.scss";
 import FooterLink from "./Footerlink/footerlink";
 
@@ -62,7 +62,7 @@ const support = [
 export default function Footer(props: footerProps) {
   return (
     <>
-      <section className={` bgcolor-footer ${styles["footer"]}`}>
+      <section className={` bgcolor-primary ${styles["footer"]}`}>
         <div className={` container py-5`}>
           <div className={`d-flex ${styles["footer-content"]}`}>
             <div className={`d-block`}>

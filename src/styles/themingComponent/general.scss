@@ -25,11 +25,14 @@
 .color-title {
   @include color-title();
 }
+.color-nav-title {
+  @include color-nav-title();
+}
 .color-border{
   @include color-border();
 }
-.bgcolor-footer{
-  @include bgcolor-footer();
+.bgcolor-primary{
+  @include bgcolor-primary();
 }
 .main-gradient{
   @include main-gradient()
@@ -68,6 +71,10 @@
   @include fw-600();
 }
 
+.primary-text{
+  @include primary-text();
+}
+
 .secondary-text {
   @include secondary-text();
 }
@@ -75,3 +82,4 @@
 .sub-text {
   @include sub-text();
 }
+

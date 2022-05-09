@@ -3,7 +3,8 @@
 $theme-ncbl: (
   "primaryColor": $colorPrimary,
   "secondaryColor": $colorSecondary,
-  "titleColor": $colorBlack,
+  "primaryTitleColor": $colorBlack-shade1,
+  "navTitleColor": $colorBlock-shade2,
   "errorColor": $colorError,
   "warningColor": $colorWarning,
   "grayColor": $colorGray,

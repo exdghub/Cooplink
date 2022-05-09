@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import Login from "../../../LoginModule/login.module";
+import Login from "../../../loginModule/login.module";
 import styles from "./header.module.scss";
 
 interface headerProps {
@@ -8,22 +8,7 @@ interface headerProps {
 }
 
 export default function Header(props: headerProps) {
-  const [navbar, setNavbar] = useState(false)
 
-  const scrollNav = () => {
-    console.log(window.scrollY)
-    if (window.scrollY >= 66) {
-      setNavbar(true)
-    } else {
-      setNavbar(false)
-    }
-  }
-
-  useEffect(() => {
-    scrollNav()
-    // adding the event when scroll change background
-    window.addEventListener("scroll", scrollNav)
-  })
   const headerlist = [
     {
       name: "Home",
@@ -49,7 +34,7 @@ export default function Header(props: headerProps) {
 
   return (
     <>
-      <nav className={`navbar fixed-top navbar-expand-lg navbar-light bg-light ${navbar ? "navbar active" : "navbar"}` }>
+      <nav className={`navbar fixed-top navbar-expand-lg navbar-light bg-light` }>
         <div className="container">
           <Link className="navbar-brand" to="/">
             COOPLINK
@@ -66,8 +51,8 @@ export default function Header(props: headerProps) {
             <ul className="navbar-nav">
               {headerlist?.map((items: any, index: any) => {
                 return(
-                <li className="nav-item fw-600 ">
-                  <Link className={`nav-link color-title ${styles["custom-nav-link"]}`} key={index} to={items.to}>
+                <li className="nav-item fw-600 " key={index}>
+                  <Link className={`nav-link color-title ${styles["custom-nav-link"]}`} to={items.to}>
                     {items.name}
                   </Link>
                 </li>

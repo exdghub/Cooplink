@@ -10,7 +10,7 @@ export default function CoopButton(props: ButtonProps) {
   const {btnName, className} = props
   return (
     <>
-      <button className={`${className}`}>
+      <button className={`primary-text ${className}`}>
         {btnName}
       </button>
     </>

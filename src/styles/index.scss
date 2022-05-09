@@ -1,7 +1,10 @@
 @import "./themingComponent/general.scss";
+@import "./themingComponent/navBar.scss";
 
-body {
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   // font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
   //   'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
   //   sans-serif;
@@ -9,6 +12,10 @@ body {
   // -moz-osx-font-smoothing: grayscale;
 }
 
+.active-scroll-spy {
+  background-color: yellowgreen;
+  border-radius: 15px;
+}
 // code {
 //   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
 //     monospace;

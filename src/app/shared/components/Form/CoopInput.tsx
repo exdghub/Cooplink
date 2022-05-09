@@ -31,7 +31,7 @@ export default function CoopInput(props: InputProps) {
   // }
   return (
     <>
-      <div className="form-group mb-3">
+      <div className="form-group form-inline mb-3">
         <label className="form-label px-2 secondary-text" htmlFor={id}>
           {label}
         </label>
@@ -44,7 +44,7 @@ export default function CoopInput(props: InputProps) {
           //   aria-describedby="emailHelp"
           placeholder={placeholder}
         />
-      
+      {/* <span className="bi bi-eye form-control-feedback"></span> */}
         {/* {type === "password" ? (
           <>
             <div className="input-group-append">
