@@ -27,7 +27,7 @@ export default function Home() {
             Ipsum has been the industry's standard dummy text ever since the
             1500s.
           </p>
-          <CoopButton className={`w-25 w-sm-25 mt-2 button-main`} btnName="Know More" />
+          <CoopButton className={`mt-2 button-main`} btnName="Know More" />
         </div>
         <div className={`col-6`}>
           {/* <BannerRight result = {data}/> */}

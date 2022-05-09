@@ -25,14 +25,14 @@ export default function About() {
                     text ever since the 1500s. when an
                   </p>
                   <CoopButton
-                    className={`w-25 w-md-25 mt-2 button-main`}
+                    className={`mt-2 button-main`}
                     btnName="Know More"
                   />
                 </div>
               </div>
               <div className=" row">
                 <div className={`col-6 col-md-7 ${styles["about-img2"]}`}>
-                  <p className={`fw-600 main-text`}>Management</p>
+                  <p className={`fw-600 main-text`}>Teams</p>
                   <p>
                     is simply dummy text of the printing and typesetting
                     industry. Lorem Ipsum has been the industry's standard dummy
@@ -40,7 +40,7 @@ export default function About() {
                   </p>
                   <div className={`d-flex justify-content-end`}>
                   <CoopButton
-                    className={`w-25 w-md-25 mt-2 button-main`}
+                    className={`mt-2 button-main`}
                     btnName="Know More"
                   />
                   </div>

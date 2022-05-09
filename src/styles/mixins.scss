@@ -87,6 +87,7 @@ $useTheme: $theme-ncbl;
 @mixin button-main {
   border-radius: 25px;
   border: none;
+  width: 120px;
   background-color: map-get($useTheme, "primaryColor");
   height: map-get($useTheme, "btnMdHeight" );
 }
