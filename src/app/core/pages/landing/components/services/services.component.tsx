@@ -41,7 +41,7 @@ export default function Services() {
             />
           </div>
           <div className={`col-12 col-sm-4 pt-5`}>
-            <div className={`pt-5 ${styles["custom-img"]}`}>
+            <div className={`pt-none pt-sm-5 ${styles["custom-img"]}`}>
               <img src={dummy} alt="ggg" className={`mw-100`} />
             </div>
             <ServiceContent

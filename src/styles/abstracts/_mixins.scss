@@ -24,13 +24,18 @@ $useTheme: $theme-ncbl;
 @mixin bgcolor-primary {
   background-color: map-get($useTheme, "footerColor");
 }
+@mixin bgcolor-secondary {
+  background-color: map-get($useTheme, "bgcolorSecondary");
+}
 @mixin main-gradient {
   background: map-get($useTheme, "mainGradient");
 }
 @mixin secondary-gradient {
   background: map-get($useTheme, "secondaryGradient");
 }
-
+@mixin comp-gradient {
+  background: map-get($useTheme, "compGradient");
+}
 ///////fonts
 @mixin primary-text {
   font-size: map-get($useTheme, "primaryText");

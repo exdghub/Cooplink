@@ -9,6 +9,7 @@ $colorError: #dc121c;
 $colorWarning: #feaf13;
 $colorGray: #8d8d8d;
 $colorFooter: #f7fcf9;
+$bgcolorSecondary: #fff;
 
 $mainGradient: transparent
   linear-gradient(180deg, #2abe560f 0%, #e1f5ea14 54%, #ffffff57 100%) 0% 0%
@@ -21,6 +22,9 @@ $secondaryGradient: transparent
     #f4fcf6 85%,
     rgba(255, 255, 255, 1) 85%
   );
+$compGradient: transparent
+  linear-gradient(180deg, #2abe563d 0%, #d2e3f700 87%, #cfe2f800 100%) 0% 0%
+  no-repeat padding-box;
 
 $mainTitle: 38px;
 $secondaryTitle: 32px;
