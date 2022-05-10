@@ -1,0 +1,22 @@
+.item {
+  width: 100px;
+  .item__image-container {
+    height: auto;
+    width: 80px;
+    max-width: fit-content;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 5px;
+    padding: 10px;
+
+    .item__image {
+      height: 60px;
+      width: 60px;
+      border-radius: 50%;
+      border: 1px solid rgba(53, 53, 53, 0.193);
+      padding: 10px;
+      .item__title {
+      }
+    }
+  }
+}

@@ -99,6 +99,10 @@
   @include sub-text();
 }
 
+.box-shadow-1 {
+  @include box-shadow-1();
+}
+
 /* width */
 ::-webkit-scrollbar {
   width: 5px;

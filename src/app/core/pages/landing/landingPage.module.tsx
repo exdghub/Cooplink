@@ -6,6 +6,8 @@ import Services from "./components/services/services.component";
 import About from "./components/about/about.component";
 import Login from "modules/auth/login/login.module";
 import Footer from "core/components/footer/footer.component";
+import NetworkSection from "./components/networks/networks.component";
+import TestimonalsSection from "./components/testimonials/testimonial.component";
 
 
 
@@ -44,7 +46,7 @@ export default function LandingPageLayout() {
               </a>
             </span>
             <span className="px-2">
-              <a className={`nav-link custom-navlink`} href="#aboutScrollSpy">
+              <a className={`nav-link custom-navlink`} href="#networkScrollSpy">
                 Network
               </a>
             </span>
@@ -82,6 +84,13 @@ export default function LandingPageLayout() {
 
         <div id="worksScrollSpy" className="">
           <HowItWorks />
+        </div>
+
+        <div id="networkScrollSpy" className="">
+          <NetworkSection />
+        </div>
+        <div className="">
+          <TestimonalsSection />
         </div>
       </div>
       <Footer />
