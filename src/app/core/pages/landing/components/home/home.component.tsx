@@ -23,7 +23,7 @@ export default function Home() {
               </span>
             </div>
           </div>
-          <p className={`mt-4 w-75 primary-text fw-600`}>
+          <p className={`mt-4 w-75 primary-text`}>
             is simply dummy text of the printing and typesetting industry. Lorem
             Ipsum has been the industry's standard dummy text ever since the
             1500s.
