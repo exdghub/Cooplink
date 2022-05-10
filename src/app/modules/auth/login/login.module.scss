@@ -1,6 +1,9 @@
-.login_wrapper {
+@import "styles/abstracts/variables";
+
+.login-wrapper {
   justify-content: space-between;
   display: flex;
+
 }
 
 .login-bottom {
@@ -12,7 +15,7 @@
   // background-color: rgb(226, 255, 241);
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
-  padding: 40px;
+
 }
 
 .login-right {
@@ -22,3 +25,4 @@
 .login-form {
   margin-bottom: 10px;
 }
+

@@ -54,7 +54,14 @@
 }
 
 @media (max-width: 576px) { 
+  .works-wrapper{
+    width: 100%;
+    
+  }
   .works-content::before{
+    display: none;
+  }
+  h4::before{
     display: none;
   }
 }

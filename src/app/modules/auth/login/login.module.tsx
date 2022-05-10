@@ -4,15 +4,16 @@ import CoopButton from "shared/components/form/button/button.component";
 import CoopCheck from "shared/components/form/check/check.component";
 import CoopInput from "shared/components/form/input/input.component";
 import CoopSelect from "shared/components/form/select/select.component";
-
+import bglogin from "assets/images/bgLogin.svg";
 import styles from "./login.module.scss";
+
 
 export default function Login(props: any) {
   return (
     <>
-      <div className={styles.login_wrapper}>
+      <div className={` ${styles["login-wrapper"]}`}>
         <div
-          className={`col-6 d-none d-sm-none d-md-block main-gradient ${styles["login-left"]}`}
+          className={`col-6 d-none d-sm-none d-md-block py-5 px-4 bg-login ${styles["login-left"]}`}
         >
           <h2 className={`main-title`}>Let's Enter to New World</h2>
           <p className={`secondary-text`}>

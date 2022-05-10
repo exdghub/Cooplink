@@ -30,6 +30,11 @@ $useTheme: $theme-ncbl;
 @mixin main-gradient {
   background: map-get($useTheme, "mainGradient");
 }
+@mixin bg-login{
+  background-image: map-get($useTheme, "mainGradient"), url("../../assets/images/bgLogin.svg");
+}
+// linear-gradient(180deg, rgba(42, 190, 86, 0.0588235294) 0%, rgba(225, 245, 234, 0.0784313725) 54%, rgba(255, 255, 255, 0.3411764706) 100%), url(http://localhost:3000/static/media/bgLogin.365aaa7….svg);
+
 @mixin secondary-gradient {
   background: map-get($useTheme, "secondaryGradient");
 }
