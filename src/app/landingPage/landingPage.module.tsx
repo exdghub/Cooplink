@@ -13,6 +13,7 @@ export default function LandingPageLayout() {
         id="landing-page-nav"
         className={`navbar navbar-light bg-white top fixed-top container d-flex justify-content-space-between ${styles["custom-nav"]}`}
       >
+        
         <div className="d-flex">
           <a className="navbar-brand" href="/">
             COOPLINK
