@@ -15,7 +15,7 @@ export default function About() {
                 <div
                   className={`col-6 col-md-5 d-flex justify-content-end ${styles["about-img"]}`}
                 >
-                  <img className={`mh-100 position-relative`} src={about} alt="about" />
+                  <img className={`position-relative img-fluid`} src={about} alt="about" />
                 </div>
                 <div className={`col-6 col-md-7 py-5`}>
                   <p className={`fw-600 main-text`}>Management</p>
@@ -46,7 +46,7 @@ export default function About() {
                   </div>
                 </div>
                 <div className={`col-6 col-md-5 ${styles["about-img2"]}`}>
-                  <img className={`mh-100 position-relative`} src={about} alt="about" />
+                  <img className={`position-relative img-fluid`} src={about} alt="about" />
                 </div>
               </div>
             </div>
