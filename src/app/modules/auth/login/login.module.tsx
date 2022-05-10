@@ -1,9 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import CoopButton from "../../../shared/components/form/button/button.component";
-import CoopCheck from "../../../shared/components/form/check/check.component";
-import CoopInput from "../../../shared/components/form/input/input.component";
-import CoopSelect from "../../../shared/components/form/select/select.component";
+import CoopButton from "shared/components/form/button/button.component";
+import CoopCheck from "shared/components/form/check/check.component";
+import CoopInput from "shared/components/form/input/input.component";
+import CoopSelect from "shared/components/form/select/select.component";
+
 import styles from "./login.module.scss";
 
 export default function Login(props: any) {

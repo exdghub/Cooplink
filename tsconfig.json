@@ -14,19 +14,8 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx",
-    "baseUrl": "./src",
-    "paths": {
-      "@/*": ["./src/*"],
-      "modules": ["app/modules"],
-      "modules/*": ["app/modules/*"],
-      "core": ["app/core"],
-      "core/*": ["app/core/*"],
-      "shared": ["app/shared"],
-      "shared/*": ["app/shared/*"],
-      "assets": ["src/assets"],
-      "assets/*": ["src/assets/*"]
-    }
+    "jsx": "react-jsx"
   },
-  "include": ["src", "src/menusItems.js"]
+  "exclude": ["node_modules"],
+  "extends": "./tsconfig.paths.json"
 }
