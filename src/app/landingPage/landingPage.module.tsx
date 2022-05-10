@@ -4,51 +4,57 @@ import Login from "../loginModule/login.module";
 import Services from "./servicesComponent/services.component";
 import About from "./aboutComponent/about.component";
 import Footer from "../core/components/Footer/footer";
+import HowItWorks from "./howItWorksComponent/howItWorks.component";
 
 export default function LandingPageLayout() {
   return (
     <>
       <nav
         id="landing-page-nav"
-        className={`navbar navbar-light bg-white top fixed-top container ${styles["custom-nav"]}`}
+        className={`navbar navbar-light bg-white top fixed-top container d-flex justify-content-space-between ${styles["custom-nav"]}`}
       >
-        <a className="navbar-brand" href="/">
-          COOPLINK
-        </a>
-        <div className={`nav nav-pills`}>
-          <span className="px-2">
-            <a className={`nav-link custom-navlink`} href="#homeScrollSpy">
-              Home
-            </a>
-          </span>
-          <span className="px-2">
-            <a className={`nav-link custom-navlink`} href="#serviceScrollSpy">
-              Services
-            </a>
-          </span>
-          <span className="px-2">
-            <a className={`nav-link custom-navlink`} href="#aboutScrollSpy">
-              About us
-            </a>
-          </span>
-          <span className="px-2">
-            <a className={`nav-link custom-navlink`} href="#aboutScrollSpy">
-              How it works
-            </a>
-          </span>
-          <span className="px-2">
-            <a className={`nav-link custom-navlink`} href="#aboutScrollSpy">
-              Network
-            </a>
-          </span>
+        
+        <div className="d-flex">
+          <a className="navbar-brand" href="/">
+            COOPLINK
+          </a>
+          <div className={`nav nav-pills`}>
+            <span className="px-2">
+              <a className={`nav-link custom-navlink`} href="#homeScrollSpy">
+                Home
+              </a>
+            </span>
+            <span className="px-2">
+              <a className={`nav-link custom-navlink`} href="#serviceScrollSpy">
+                Services
+              </a>
+            </span>
+            <span className="px-2">
+              <a className={`nav-link custom-navlink`} href="#aboutScrollSpy">
+                About us
+              </a>
+            </span>
+            <span className="px-2">
+              <a className={`nav-link custom-navlink`} href="#worksScrollSpy">
+                How it works
+              </a>
+            </span>
+            <span className="px-2">
+              <a className={`nav-link custom-navlink`} href="#aboutScrollSpy">
+                Network
+              </a>
+            </span>
+          </div>
         </div>
-        <button
-          className={`button-small mx-2 text-uppercase position-absolute ${styles["button-right"]}`}
-          data-bs-toggle="modal"
-          data-bs-target="#loginModal"
-        >
-          Login
-        </button>
+        <div className={`d-flex`}>
+          <button
+            className={`button-small mx-2 text-uppercase ${styles["button-right"]}`}
+            data-bs-toggle="modal"
+            data-bs-target="#loginModal"
+          >
+            Login
+          </button>
+        </div>
       </nav>
 
       <div
@@ -69,6 +75,10 @@ export default function LandingPageLayout() {
         <div id="aboutScrollSpy" className="">
           <About />
         </div>
+
+        <div id="worksScrollSpy" className="">
+          <HowItWorks />
+        </div>
       </div>
       <Footer />
 
@@ -79,7 +89,7 @@ export default function LandingPageLayout() {
         aria-labelledby="loginModalLabel"
         aria-hidden="true"
       >
-        <div className="modal-dialog modal-lg">
+        <div className="modal-dialog modal-dialog-centered modal-lg">
           <div className={`modal-content ${styles["login-modal-content"]} `}>
             <button
               type="button"

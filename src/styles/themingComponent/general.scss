@@ -34,12 +34,19 @@
 .bgcolor-primary{
   @include bgcolor-primary();
 }
+.bgcolor-secondary{
+  @include bgcolor-secondary();
+}
 .main-gradient{
-  @include main-gradient()
+  @include main-gradient();
 }
 .secondary-gradient{
   @include secondary-gradient();
 }
+.comp-gradient{
+  @include comp-gradient();
+}
+
 
 .button-primary {
   @include button-normal();
@@ -73,6 +80,9 @@
 .fw-600{
   @include fw-600();
 }
+.fw-700{
+  @include fw-700();
+}
 
 .primary-text{
   @include primary-text();
@@ -90,3 +100,25 @@
   @include sub-text();
 }
 
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px; 
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+border-radius: 10px;
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+border-radius: 10px;
+  background: #aaa; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #666; 
+}
