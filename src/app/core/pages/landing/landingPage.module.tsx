@@ -7,17 +7,13 @@ import About from "./components/about/about.component";
 import Login from "modules/auth/login/login.module";
 import Footer from "core/components/footer/footer.component";
 
-
-
-
 export default function LandingPageLayout() {
   return (
     <>
       <nav
         id="landing-page-nav"
-        className={`navbar navbar-light bg-white top fixed-top container d-flex justify-content-space-between ${styles["custom-nav"]}`}
+        className={`navbar navbar-light bg-white top fixed-top container ${styles["custom-nav"]}`}
       >
-
         <div className="d-flex">
           <a className="navbar-brand" href="/">
             COOPLINK
