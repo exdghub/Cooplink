@@ -1,7 +1,7 @@
 import React from "react";
 import CoopButton from "shared/components/form/button/button.component";
 import styles from "./home.module.scss";
-import landing from "assets/images/dummyimg.jpg"
+import landing from "assets/images/landing.png";
 
 
 export default function Home() {
