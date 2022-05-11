@@ -3,9 +3,10 @@
   height: 70px;
 }
 
-.button-right {
-  right: 0;
+.btn-toggle{
+  border: none !important;
 }
+
 
 ////////////////////////login Modal
 .close-btn {
@@ -32,7 +33,7 @@
   justify-content: space-between;
 }
 
-.color-change{
+.color-change {
   transition: 1s all ease;
   background-color: #eee;
 }

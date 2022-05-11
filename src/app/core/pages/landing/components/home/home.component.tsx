@@ -30,7 +30,7 @@ export default function Home() {
           </p>
           <CoopButton className={`mt-2 button-main`} btnName="Know More" />
         </div>
-        <div className={`col-6`}>ghdghdfhg</div>
+        <div className={`col-6 d-none d-lg-block`}>ghdghdfhg</div>
       </div>
     </>
   );

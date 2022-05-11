@@ -11,7 +11,6 @@ import { useState } from "react";
 
 export default function LandingPageLayout() {
   const [navbar, setNavbar] = useState(false);
-  const [toggle, setToggle] = useState(false);
   const changeBackground = () => {
     console.log(window.scrollY);
     if (window.scrollY >= 66) {
@@ -27,74 +26,72 @@ export default function LandingPageLayout() {
     window.addEventListener("scroll", changeBackground);
   });
 
+
   return (
     <>
       <nav
-        id="landing-page-nav"
-        className={`${
+        className={`navbar navbar-expand-lg navbar-light bg-md-none fixed-top ${
           navbar ? `navbar ${styles["color-change"]}` : "navbar"
-        } navbar-light top fixed-top ${styles["custom-nav"]} `}
+        }`}
       >
         <div className="container">
-          <div className="d-flex">
-            <a className="navbar-brand" href="/">
-              COOPLINK
-            </a>
-            {/* <button
-              className="navbar-toggler d-flex d-lg-none"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarSupportedContent"
-              aria-controls="navbarSupportedContent"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span className="navbar-toggler-icon"></span>
-            </button> */}
+          <a className="navbar-brand order-2 order-md-2" href="/">
+            COOPLINK
+          </a>
+          <button
+            className={`navbar-toggler order-1 ${styles["btn-toggle"]}`}
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
 
-            <div
-              className={`nav nav-pills `}
-              id="navbarSupportedContent"
-            >
-              <span className="px-2">
+          >
+            <span className="navbar-toggler-icon"></span>
+          </button>
+          <div className="collapse navbar-collapse order-4" id="navbarSupportedContent">
+            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+              <li className="nav-item">
                 <a className={`nav-link custom-navlink`} href="#homeScrollSpy">
                   Home
                 </a>
-              </span>
-              <span className="px-2">
+              </li>
+              <li className="nav-item">
                 <a
                   className={`nav-link custom-navlink`}
                   href="#serviceScrollSpy"
                 >
                   Services
                 </a>
-              </span>
-              <span className="px-2">
+              </li>
+              <li className="nav-item">
                 <a className={`nav-link custom-navlink`} href="#aboutScrollSpy">
                   About us
                 </a>
-              </span>
-              <span className="px-2">
+              </li>
+              <li className="nav-item">
                 <a className={`nav-link custom-navlink`} href="#worksScrollSpy">
                   How it works
                 </a>
-              </span>
-              <span className="px-2">
+              </li>
+              <li className="nav-item">
                 <a className={`nav-link custom-navlink`} href="#aboutScrollSpy">
                   Network
                 </a>
-              </span>
+              </li>
+            </ul>
+           
+          </div>
+          <div className={`d-flex order-4`}>
+              <button
+                className={`button-small mx-2 text-uppercase ${styles["button-right"]}`}
+                data-bs-toggle="modal"
+                data-bs-target="#loginModal"
+              >
+                Login
+              </button>
             </div>
-          </div>
-          <div className={`d-flex`}>
-            <button
-              className={`button-small mx-2 text-uppercase ${styles["button-right"]}`}
-              data-bs-toggle="modal"
-              data-bs-target="#loginModal"
-            >
-              Login
-            </button>
-          </div>
         </div>
       </nav>
 
