@@ -5,7 +5,7 @@ export default function HowItWorksContent() {
   return (
     <>
       <div
-        className={`comp-gradient rounded-top p-4 row ${styles["works-wrapper"]}`}
+        className={`comp-gradient p-4 row ${styles["works-wrapper"]}`}
       >
         <div className={`col-6`}>
           <div

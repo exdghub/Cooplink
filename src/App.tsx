@@ -1,15 +1,12 @@
-
 import { BrowserRouter } from "react-router-dom";
-import RoutePage from "./app/core/routes/routes";
-import Footer from "./app/core/components/footer/footer.component";
-import Header from "./app/core/components/header/header.component";
-import Login from "./app/modules/auth/login/login.module";
 import useIsLoggedIn from "./app/shared/hooks/useIsLoggedIn";
-import LandingPageLayout from "./app/core/pages/landing/landingPage.module";
+import RoutePage from "core/routes/routes";
+import Header from "core/components/header/header.component";
+import Footer from "core/components/footer/footer.component";
+import LandingPageLayout from "core/pages/landing/landingPage.module";
 
 function App() {
-
-  const { itemState: isLoggedIn } = useIsLoggedIn()
+  const { itemState: isLoggedIn } = useIsLoggedIn();
 
   return (
     <>
