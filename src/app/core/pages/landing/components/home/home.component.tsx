@@ -1,6 +1,7 @@
 import React from "react";
 import CoopButton from "shared/components/form/button/button.component";
 import styles from "./home.module.scss";
+import landing from "assets/images/landing.png"
 
 
 export default function Home() {
@@ -30,7 +31,9 @@ export default function Home() {
           </p>
           <CoopButton className={`button-main`} btnName="Know More" />
         </div>
-        <div className={`col-6`}>ghdghdfhg</div>
+        <div className={`col-6`}>
+          <img src={landing} alt="Landing Image" className={styles["landing-image"]} />
+        </div>
       </div>
     </>
   );
