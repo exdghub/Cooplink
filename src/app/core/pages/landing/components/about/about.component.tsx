@@ -21,7 +21,7 @@ export default function About() {
                 </div>
                 <div className={`col-6 col-md-7 py-5`}>
                   <p className={`fw-600 main-text`}>Management</p>
-                  <p className={` text-right`}>
+                  <p className={`w-75 text-right`}>
                     is simply dummy text of the printing and typesetting
                     industry. Lorem Ipsum has been the industry's standard dummy
                     text ever since the 1500s. when an
@@ -37,8 +37,7 @@ export default function About() {
                   <p className={`fw-600 main-text`}>Teams</p>
                   <p>
                     is simply dummy text of the printing and typesetting
-                    industry. Lorem Ipsum has been the industry's standard dummy
-                    text ever since the 1500s. when an
+
                   </p>
                   <div className={`d-flex justify-content-end`}>
                     <CoopButton
