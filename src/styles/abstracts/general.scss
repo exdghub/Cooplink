@@ -40,9 +40,6 @@
 .main-gradient {
   @include main-gradient();
 }
-.bg-login{
-  @include bg-login();
-}
 .secondary-gradient {
   @include secondary-gradient();
 }
@@ -100,6 +97,10 @@
 
 .sub-text {
   @include sub-text();
+}
+
+.box-shadow-1 {
+  @include box-shadow-1();
 }
 
 /* width */

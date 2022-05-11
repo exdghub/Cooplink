@@ -8,6 +8,8 @@ import Login from "modules/auth/login/login.module";
 import Footer from "core/components/footer/footer.component";
 import { useEffect } from "react";
 import { useState } from "react";
+import NetworkSection from "./components/networks/networks.component";
+import TestimonalsSection from "./components/testimonials/testimonial.component";
 
 export default function LandingPageLayout() {
   const [navbar, setNavbar] = useState(false);
@@ -116,6 +118,13 @@ export default function LandingPageLayout() {
 
         <div id="worksScrollSpy" className="">
           <HowItWorks />
+        </div>
+
+        <div id="networkScrollSpy" className="">
+          <NetworkSection />
+        </div>
+        <div className="">
+          <TestimonalsSection />
         </div>
       </div>
       <Footer />
