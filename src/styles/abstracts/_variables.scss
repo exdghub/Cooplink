@@ -11,7 +11,12 @@ $colorGray: #8d8d8d;
 $colorFooter: #f7fcf9;
 $bgcolorSecondary: #fff;
 
-$mainGradient: linear-gradient(180deg, #2abe560f 0%, #e1f5ea14 54%, #ffffff57 100%);
+$mainGradient: linear-gradient(
+  180deg,
+  #2abe560f 0%,
+  #e1f5ea14 54%,
+  #ffffff57 100%
+);
 
 $secondaryGradient: transparent
   linear-gradient(
