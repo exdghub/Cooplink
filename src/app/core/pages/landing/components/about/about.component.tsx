@@ -23,8 +23,7 @@ export default function About() {
                   <p className={`fw-600 main-text`}>Management</p>
                   <p className={`w-75 text-right`}>
                     is simply dummy text of the printing and typesetting
-                    industry. Lorem Ipsum has been the industry's standard dummy
-                    text ever since the 1500s. when an
+                    industry. 
                   </p>
                   <CoopButton
                     className={`mt-2 button-main`}

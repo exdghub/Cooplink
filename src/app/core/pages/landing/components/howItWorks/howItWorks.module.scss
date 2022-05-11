@@ -4,7 +4,6 @@
   width: 80%;
   height: 250px;
   opacity: 1;
-  border-radius: 10px 10px 0 0;
 }
 
 // .works-img {
@@ -28,7 +27,7 @@
 .works-content::before{
   content: "";
   width: 1px;
-  background: $colorGray;
+  background: $colorSecondary;
   z-index: 1;
   position: absolute;
   height: 80%;
@@ -39,7 +38,7 @@
 }
 
 .works-content{
-  h4::before{
+  h5::before{
     content: "";
     width: 15px;
     height: 15px;
@@ -65,7 +64,7 @@
   .works-content::before{
     display: none;
   }
-  h4::before{
+  h5::before{
     display: none;
   }
 }

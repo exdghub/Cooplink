@@ -5,7 +5,7 @@ export default function HowItWorksContent() {
   return (
     <>
       <div
-        className={`comp-gradient p-4 row ${styles["works-wrapper"]}`}
+        className={`comp-gradient rounded-top p-4 row ${styles["works-wrapper"]}`}
       >
         <div className={`col-6`}>
           <div
@@ -27,7 +27,7 @@ export default function HowItWorksContent() {
           </div>
           <div
             className={`rounded-circle position-relative ${styles["works-img"]}`}
-          >
+          >   
             <img src={money} alt="money" />
           </div>
         </div>
