@@ -5,7 +5,7 @@ import man from "assets/images/man.jpg"
 
 const TestimonalsSection = () => {
     return (
-        <div className="container">
+        <div className="container py-5">
             <HeaderTitle titleText={"Our"} colorText={"Testimonial"} />
             <div id="multi-item-example" className="carousel slide carousel-multi-item py-5" data-ride="carousel">
 
