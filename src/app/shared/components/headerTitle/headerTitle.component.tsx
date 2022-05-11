@@ -9,15 +9,21 @@ export default function HeaderTitle(props: TitleProps) {
   return (
     <>
       <div>
-        <h2 className={`main-title text-center  ${className} ${styles["headerText"]}`}>
-          {titleText}
-          <span className={`color-primary`}>{colorText}</span>
-        </h2>
+        <div className={`${styles["header-container"]}   ${className}`}>
+          <h2 className={`main-title text-center ${styles["headerText"]}`}>
+            {titleText}
+            <span className={`color-primary pl-2`}>{colorText}</span>
+          </h2>
+          <div className={styles["header-line"]}> </div>
+        </div>
 
+
+        {/* For description text if subtitle is true */}
         {subTitle ?
           <p className={`text-center px-2 py-5`}>{desc}</p>
           : ""}
       </div>
+
     </>
   );
 }

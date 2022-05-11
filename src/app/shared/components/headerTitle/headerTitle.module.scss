@@ -1,0 +1,30 @@
+@import "styles/abstracts/variables";
+.header-container {
+  .header-line {
+    height: 3px;
+    width: 150px;
+    margin: auto;
+    background-color: $colorPrimary;
+    color: $colorPrimary;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0px;
+      right: 10px;
+      height: 3px;
+      width: 3px;
+      background-color: $bgcolorSecondary;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0px;
+      right: 30px;
+      height: 3px;
+      width: 3px;
+      background-color: $bgcolorSecondary;
+    }
+  }
+}
