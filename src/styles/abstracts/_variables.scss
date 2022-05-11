@@ -11,9 +11,13 @@ $colorGray: #8d8d8d;
 $colorFooter: #f7fcf9;
 $bgcolorSecondary: #fff;
 
-$mainGradient: transparent
-  linear-gradient(180deg, #2abe560f 0%, #e1f5ea14 54%, #ffffff57 100%) 0% 0%
-  no-repeat padding-box;
+$mainGradient: linear-gradient(
+  180deg,
+  #2abe560f 0%,
+  #e1f5ea14 54%,
+  #ffffff57 100%
+);
+
 $secondaryGradient: transparent
   linear-gradient(
     180deg,

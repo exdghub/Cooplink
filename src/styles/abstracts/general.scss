@@ -40,6 +40,9 @@
 .main-gradient {
   @include main-gradient();
 }
+.bg-login{
+  @include bg-login();
+}
 .secondary-gradient {
   @include secondary-gradient();
 }
