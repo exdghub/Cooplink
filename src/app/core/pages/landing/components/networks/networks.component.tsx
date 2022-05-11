@@ -8,7 +8,7 @@ const NetworkSection = () => {
     <div className="container">
       <HeaderTitle titleText={"Our"} colorText={"Networks"} />
 
-      <div className="mt-5 mb-5">
+      <div className="py-5">
         <GridBlock items={bankList} />
       </div>
     </div>

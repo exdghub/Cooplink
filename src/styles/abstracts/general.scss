@@ -124,3 +124,17 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #666;
 }
+
+.indicator {
+  bottom: 100px;
+  li {
+    background-color: $colorSecondary;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+  }
+
+  .isActive {
+    background-color: $colorSecondary;
+  }
+}
