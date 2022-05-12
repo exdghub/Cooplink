@@ -18,7 +18,7 @@ export default function HowItWorks() {
 
           <div className={`col-12 col-md-6 pt-5 px-5 order-2 order-md-2`}>
             <div className="pb-5  order-sm-last text-center text-md-start">
-              <h5 className="">
+              <h5 className={`${styles["works-right"]}`}>
                 Through mBanking/eBanking of associated cooperative/bank
               </h5>
               <ol className="list-group list-group-numbered">
@@ -34,7 +34,7 @@ export default function HowItWorks() {
 
           <div className={`col-12 col-md-6 pt-5 px-5 order-4 order-md-3`}>
             <div className="pb-5 text-center text-md-end">
-              <h5 className=" ">Through cooplink web-portal</h5>
+              <h5 className={`${styles["works-left"]}`}>Through cooplink web-portal</h5>
               <ol className="list-group list-group-numbered">
                 <li>
                   Select fund transfer option; coop to coop, coop to bank or

@@ -21,7 +21,7 @@ export default function About() {
                 </div>
                 <div className={`col-6 col-md-7 py-5`}>
                   <p className={`fw-600 main-text`}>Management</p>
-                  <p className={`w-75 text-right`}>
+                  <p className={`w-75`}>
                     is simply dummy text of the printing and typesetting
                     industry. 
                   </p>

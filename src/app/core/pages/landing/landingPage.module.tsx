@@ -32,7 +32,7 @@ export default function LandingPageLayout() {
   return (
     <>
       <nav
-        className={`navbar navbar-expand-lg navbar-light bg-md-none fixed-top ${
+        className={`navbar navbar-expand-lg navbar-light bg-white bg-md-none fixed-top ${
           navbar ? `navbar ${styles["color-change"]}` : "navbar"
         }`}
       >
@@ -54,12 +54,12 @@ export default function LandingPageLayout() {
           </button>
           <div className="collapse navbar-collapse order-4" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-              <li className="nav-item">
+              <li className="nav-item px-3">
                 <a className={`nav-link custom-navlink`} href="#homeScrollSpy">
                   Home
                 </a>
               </li>
-              <li className="nav-item">
+              <li className="nav-item px-3">
                 <a
                   className={`nav-link custom-navlink`}
                   href="#serviceScrollSpy"
@@ -67,18 +67,18 @@ export default function LandingPageLayout() {
                   Services
                 </a>
               </li>
-              <li className="nav-item">
+              <li className="nav-item px-3">
                 <a className={`nav-link custom-navlink`} href="#aboutScrollSpy">
                   About us
                 </a>
               </li>
-              <li className="nav-item">
+              <li className="nav-item px-3">
                 <a className={`nav-link custom-navlink`} href="#worksScrollSpy">
                   How it works
                 </a>
               </li>
-              <li className="nav-item">
-                <a className={`nav-link custom-navlink`} href="#aboutScrollSpy">
+              <li className="nav-item px-3">
+                <a className={`nav-link custom-navlink`} href="#networkScrollSpy">
                   Network
                 </a>
               </li>

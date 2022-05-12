@@ -1,6 +1,9 @@
 import React from "react";
 import ServiceContent from "./components/serviceContent";
 import dummy from "assets/images/dummyimg.jpg";
+import service from "assets/images/service.png";
+import cooperative from "assets/images/cooperative.jpg";
+import serviceChart from "assets/images/serviceChart.jpg";
 import styles from "./services.module.scss";
 import HeaderTitle from "shared/components/headerTitle/headerTitle.component";
 
@@ -17,10 +20,11 @@ export default function Services() {
           subTitle={true}
         />
 
-        <div className={`row`}>
-          <div className={`col-12 col-sm-4 `}>
-            <div className={`${styles["custom-img"]}`}>
+        <div className={`row `}>
+          <div className={`col-12 col-sm-4 position-relative`}>
+            <div className={`${styles["custom-img"]} pb-4`}>
               <img src={dummy} alt="ggg" className={`mw-100`} />
+              <img src={serviceChart} alt="service"/>
             </div>
             <ServiceContent
               title={"Cooperative to Cooperative"}
@@ -30,7 +34,7 @@ export default function Services() {
             />
           </div>
           <div className={`col-12 col-sm-4 `}>
-            <div className={`pt-5 ${styles["custom-img"]}`}>
+            <div className={`pt-5 ${styles["custom-img2"]} pb-4`}>
               <img src={dummy} alt="ggg" className={`mw-100`} />
             </div>
             <ServiceContent
@@ -41,8 +45,10 @@ export default function Services() {
             />
           </div>
           <div className={`col-12 col-sm-4 pt-5`}>
-            <div className={`pt-none pt-sm-5 ${styles["custom-img"]}`}>
+            <div className={`pt-none pt-sm-5 ${styles["custom-img3"]} pb-4`}>
               <img src={dummy} alt="ggg" className={`mw-100`} />
+              <img src={cooperative} alt="ggg" className={`mw-100`} />
+              <img src={cooperative} alt="ggg" className={`mw-100`} />
             </div>
             <ServiceContent
               title={"Bank to Cooperative"}
