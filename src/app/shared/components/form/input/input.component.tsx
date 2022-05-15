@@ -5,7 +5,7 @@ import { InputProps } from "./input.types";
 
 
 export default function CoopInput(props: InputProps) {
-  const { label, type, name, id, placeholder, errorlabel, inputValue } = props;
+  const { label, type, name, id, placeholder, errorlabel, inputValue, onChange } = props;
 
   const [showPassword, setShowPassword] = useState(false);
   // const [passwordType, setPasswordType] = useState("password");
@@ -36,6 +36,7 @@ export default function CoopInput(props: InputProps) {
           value={inputValue}
           //   aria-describedby="emailHelp"
           placeholder={placeholder}
+          onChange={onChange}
         />
         {/* <span className="bi bi-eye form-control-feedback"></span> */}
         {/* {type === "password" ? (

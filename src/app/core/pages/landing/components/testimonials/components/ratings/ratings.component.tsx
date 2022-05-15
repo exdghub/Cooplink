@@ -12,8 +12,8 @@ const Ratings = (props: RatingProps) => {
 
     return (
         <div>
-            {[...Array(rating)].map((e, i) => <FontAwesomeIcon icon={faStar} className={styles["rating-gold"]} />)}
-            {[...Array(noColor)].map((e, i) => <FontAwesomeIcon icon={faStar} className={styles["rating-grey"]} />)}
+            {[...Array(rating)].map((e, i) => <FontAwesomeIcon icon={faStar} className={styles["rating-gold"]} key={i} />)}
+            {[...Array(noColor)].map((e, i) => <FontAwesomeIcon icon={faStar} className={styles["rating-grey"]} key={i} />)}
         </div >
     )
 }

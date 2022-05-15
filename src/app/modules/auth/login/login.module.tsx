@@ -1,14 +1,23 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import { useAuth } from "core/utils/auth";
+import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import CoopButton from "shared/components/form/button/button.component";
 import CoopCheck from "shared/components/form/check/check.component";
 import CoopInput from "shared/components/form/input/input.component";
 import CoopSelect from "shared/components/form/select/select.component";
-import bglogin from "assets/images/bgLogin.svg";
 import styles from "./login.module.scss";
 
 
+
 export default function Login(props: any) {
+  const [user, setUser] = useState("")
+  const auth = useAuth()
+  const navigate = useNavigate()
+
+  const handleLogin = () => {
+    auth.login(user)
+    navigate("/dashboard", { replace: true })
+  }
   return (
     <>
       <div className={` ${styles["login-wrapper"]}`}>
@@ -39,6 +48,7 @@ export default function Login(props: any) {
               label={"Username"}
               type={"text"}
               placeholder={"Enter your username"}
+              onChange={(e) => setUser(e.target.value)}
             />
             <CoopInput
               label={"Password"}
@@ -59,6 +69,7 @@ export default function Login(props: any) {
             <CoopButton
               btnName={"Login"}
               className={"text-uppercase button-primary"}
+              onClick={handleLogin}
             />
           </div>
         </div>

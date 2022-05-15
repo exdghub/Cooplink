@@ -8,8 +8,16 @@ import Login from "modules/auth/login/login.module";
 import Footer from "core/components/footer/footer.component";
 import NetworkSection from "./components/networks/networks.component";
 import TestimonalsSection from "./components/testimonials/testimonial.component";
+import { useAuth } from "core/utils/auth";
+import { Navigate } from "react-router-dom";
 
 export default function LandingPageLayout() {
+  const { user } = useAuth();
+
+  if (user) {
+    return <Navigate to="/dashboard" />
+  }
+
   return (
     <>
       <nav

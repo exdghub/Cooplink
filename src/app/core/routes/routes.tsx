@@ -1,17 +1,26 @@
 import React from "react";
-import { Route, Routes } from "react-router-dom";
+import { RouteObject, useRoutes } from "react-router-dom";
 
-// import Login from "../app/loginModule/login.module";
+import { dashboardRoutes } from "./dashboard";
+import { fundTransferRoutes } from "./fundTransfer";
+import { landingRoutes } from "./landing";
 
-export default function RoutePage() {
-    return (
-        <>
-            <Routes>
-                {/* <Route path="/" element={<LandingPageLayout />} /> */}
-                {/* <Route path="/login" element={<Login />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} /> */}
-            </Routes>
-        </>
-    );
+const PageNotFound = React.lazy(() => import("core/pages/notfound/notfound.module"));
+
+export const routes: RouteObject[] = [
+    landingRoutes,
+    dashboardRoutes,
+    fundTransferRoutes,
+    {
+        path: "*",
+        element: <React.Suspense fallback="...Loading"><PageNotFound /></React.Suspense>
+    }
+]
+
+
+const AppRoutes: React.FC = (): JSX.Element => {
+    const router = useRoutes(routes);
+    return <>{router}</>
 }
+
+export default AppRoutes

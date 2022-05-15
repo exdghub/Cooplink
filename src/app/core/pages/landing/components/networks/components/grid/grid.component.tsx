@@ -9,8 +9,8 @@ const GridBlock = (props: GridProps) => {
     return (
         <div className={`${styles["grid"]}`}>
             {
-                items.map((item: GridItemProps) => {
-                    return (<div>
+                items.map((item: GridItemProps, index) => {
+                    return (<div key={index}>
                         <GridItem icon={item.icon} title={item.title} />
                     </div>)
                 })
