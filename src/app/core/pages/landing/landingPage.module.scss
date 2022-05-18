@@ -3,16 +3,23 @@
 }
 .custom-nav{
   transition: 1s all ease;
+
 }
 .custom-nav-content{
   margin-top: -70px;
   padding-top: 70px;
 }
-
+.custom-logo{
+  height: 35px;
+}
 
 .color-change {
   transition: 1s all ease;
   background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  opacity: 0.9;
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
 }
 
 ////////////////////////login Modal

@@ -47,7 +47,7 @@ export default function LandingPageLayout() {
       >
         <div className="container">
           <a className="navbar-brand order-2 order-md-2" href="/">
-            <img src={cooplogo} alt="" />
+            <img src={cooplogo} alt="sss" className={`${styles["custom-logo"]}`}/>
           </a>
           <button
             className={`navbar-toggler order-1 ${styles["btn-toggle"]}`}
@@ -114,10 +114,10 @@ export default function LandingPageLayout() {
         data-bs-spy="scroll"
         data-bs-target="#landing-page-nav"
         data-bs-offset="70"
-        className={`scrollspy-example bg-login ${styles["custom-nav-content"]}`}
+        className={`scrollspy-example `}
         tabIndex={0}
       >
-        <div id="homeScrollSpy" className="container">
+        <div id="homeScrollSpy" className={`main-gradient ${styles["custom-nav-content"]}`}>
           <Home />
         </div>
 

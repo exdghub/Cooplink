@@ -3,12 +3,12 @@
 .custom-navlink {
   @include color-nav-title();
   @include custom-navlink();
-  // @include sub-text();
+  @include nav-text();
   @include fw-500();
 }
 
 .custom-navlink.active {
   @include color-primary();
   @include custom-navlink();
-  @include fw-700();
+  @include fw-600();
 }
