@@ -1,12 +1,13 @@
 import React from "react";
 import CoopButton from "shared/components/form/button/button.component";
 import styles from "./home.module.scss";
-import dashboard from "assets/images/svg/Dashboard.svg";
+import dashboard from "assets/images/svg/finaldash.svg";
 
 export default function Home() {
   return (
     <>
-      <div className={`row py-5 ${styles["home__wrapper"]}`}>
+    <div className="container">
+      <div className={`row py-5 ${styles["home__wrapper"]} container`}>
         <div className={`col-md-12 col-lg-6`}>
           <h2 className={styles["main__heading"]}>
             Autonomous association of person
@@ -35,8 +36,9 @@ export default function Home() {
           </div>
         </div>
         <div className={`col-6 d-none d-lg-flex justify-content-end`}>
-          <img src={dashboard} alt="dashboard" className=" w-75 " />
+          <img src={dashboard} alt="dashboard" className="w-100 img-fluid" />
         </div>
+      </div>
       </div>
     </>
   );
