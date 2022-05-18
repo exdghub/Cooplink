@@ -7,4 +7,5 @@ export interface InputProps {
   errorlabel?: string;
   inputValue?: any;
   onChange?: (e: any) => void;
+  className?: string;
 }

@@ -1,69 +1,112 @@
 import styles from "./landingPage.module.scss";
-
 import HowItWorks from "./components/howItWorks/howItWorks.component";
 import Home from "./components/home/home.component";
 import Services from "./components/services/services.component";
 import About from "./components/about/about.component";
 import Login from "modules/auth/login/login.module";
 import Footer from "core/components/footer/footer.component";
+import { useEffect } from "react";
+import { useState } from "react";
 import NetworkSection from "./components/networks/networks.component";
 import TestimonalsSection from "./components/testimonials/testimonial.component";
 import { useAuth } from "core/utils/auth";
 import { Navigate } from "react-router-dom";
+import cooplogo from "assets/images/cooplogo.svg";
 
 export default function LandingPageLayout() {
-  const { user } = useAuth();
 
+  // To change the background of the navabar
+  const [navbar, setNavbar] = useState(false);
+  const changeBackground = () => {
+    console.log(window.scrollY);
+    if (window.scrollY >= 66) {
+      setNavbar(true);
+    } else {
+      setNavbar(false);
+    }
+  };
+
+  useEffect(() => {
+    changeBackground();
+    // adding the event when scroll change background
+    window.addEventListener("scroll", changeBackground);
+  });
+
+  // To check if the user is logged in or not
+  const { user } = useAuth();
   if (user) {
     return <Navigate to="/dashboard" />
-  }
+  } else { }
+
 
   return (
     <>
       <nav
-        id="landing-page-nav"
-        className={`navbar navbar-light bg-white top fixed-top container ${styles["custom-nav"]}`}
+        className={`navbar navbar-expand-lg navbar-light bg-md-none fixed-top ${navbar ? `navbar ${styles["color-change"]}` : "navbar"
+          } ${styles["custom-nav"]}`}
       >
-        <div className="d-flex">
-          <a className="navbar-brand" href="/">
-            COOPLINK
+        <div className="container">
+          <a className="navbar-brand order-2 order-md-2" href="/">
+            <img src={cooplogo} alt="" />
           </a>
-          <div className={`nav nav-pills`}>
-            <span className="px-2">
-              <a className={`nav-link custom-navlink`} href="#homeScrollSpy">
-                Home
-              </a>
-            </span>
-            <span className="px-2">
-              <a className={`nav-link custom-navlink`} href="#serviceScrollSpy">
-                Services
-              </a>
-            </span>
-            <span className="px-2">
-              <a className={`nav-link custom-navlink`} href="#aboutScrollSpy">
-                About us
-              </a>
-            </span>
-            <span className="px-2">
-              <a className={`nav-link custom-navlink`} href="#worksScrollSpy">
-                How it works
-              </a>
-            </span>
-            <span className="px-2">
-              <a className={`nav-link custom-navlink`} href="#networkScrollSpy">
-                Network
-              </a>
-            </span>
-          </div>
-        </div>
-        <div className={`d-flex`}>
           <button
-            className={`button-small mx-2 text-uppercase ${styles["button-right"]}`}
-            data-bs-toggle="modal"
-            data-bs-target="#loginModal"
+            className={`navbar-toggler order-1 ${styles["btn-toggle"]}`}
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
           >
-            Login
+            <span className="navbar-toggler-icon"></span>
           </button>
+          <div
+            className="collapse navbar-collapse order-4"
+            id="navbarSupportedContent"
+          >
+            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+              <li className="nav-item px-3">
+                <a className={`nav-link custom-navlink`} href="#homeScrollSpy">
+                  Home
+                </a>
+              </li>
+              <li className="nav-item px-3">
+                <a
+                  className={`nav-link custom-navlink`}
+                  href="#serviceScrollSpy"
+                >
+                  Services
+                </a>
+              </li>
+              <li className="nav-item px-3">
+                <a className={`nav-link custom-navlink`} href="#aboutScrollSpy">
+                  About us
+                </a>
+              </li>
+              <li className="nav-item px-3">
+                <a className={`nav-link custom-navlink`} href="#worksScrollSpy">
+                  How it works
+                </a>
+              </li>
+              <li className="nav-item px-3">
+                <a
+                  className={`nav-link custom-navlink`}
+                  href="#networkScrollSpy"
+                >
+                  Network
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div className={`d-flex order-4`}>
+            <button
+              className={`button-small mx-2 text-uppercase ${styles["button-right"]}`}
+              data-bs-toggle="modal"
+              data-bs-target="#loginModal"
+            >
+              Login
+            </button>
+          </div>
         </div>
       </nav>
 
@@ -71,7 +114,7 @@ export default function LandingPageLayout() {
         data-bs-spy="scroll"
         data-bs-target="#landing-page-nav"
         data-bs-offset="70"
-        className="scrollspy-example"
+        className={`scrollspy-example bg-login ${styles["custom-nav-content"]}`}
         tabIndex={0}
       >
         <div id="homeScrollSpy" className="container">
@@ -107,13 +150,15 @@ export default function LandingPageLayout() {
         aria-hidden="true"
       >
         <div className="modal-dialog modal-dialog-centered modal-lg">
-          <div className={`modal-content ${styles["login-modal-content"]} `}>
-            <button
-              type="button"
-              className={`color-title  ${styles["close-btn"]}`}
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
+          <div className={`modal-content ${styles["login-modal-content"]}`}>
+            <div className="position-relative">
+              <button
+                type="button"
+                className={` ${styles["close-btn"]}`}
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
             <Login />
           </div>
         </div>

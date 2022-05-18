@@ -11,6 +11,9 @@ $useTheme: $theme-ncbl;
 @mixin color-white {
   color: map-get($useTheme, "whiteColor");
 }
+@mixin color-gray {
+  color: map-get($useTheme, "grayColor");
+}
 @mixin color-title {
   color: map-get($useTheme, "primaryTitleColor");
 }
@@ -30,14 +33,15 @@ $useTheme: $theme-ncbl;
 @mixin main-gradient {
   background: map-get($useTheme, "mainGradient");
 }
-@mixin body-bg {
-  background-color: map-get($useTheme, "clr-grey-100");
+@mixin primary-gradient {
+  background: map-get($useTheme, "primaryGradient");
 }
-
 @mixin bg-login {
   background-image: map-get($useTheme, "mainGradient"),
-    url("../../assets/images/bgLogin.svg");
+    url("../../assets/images/svg/bgLogin.svg");
+  background-repeat: no-repeat;
 }
+
 // linear-gradient(180deg, rgba(42, 190, 86, 0.0588235294) 0%, rgba(225, 245, 234, 0.0784313725) 54%, rgba(255, 255, 255, 0.3411764706) 100%), url(http://localhost:3000/static/media/bgLogin.365aaa7….svg);
 
 @mixin secondary-gradient {
@@ -90,6 +94,23 @@ $useTheme: $theme-ncbl;
   border: none;
   background-color: map-get($useTheme, "primaryColor");
 }
+
+@mixin button-secondary {
+  width: map-get($useTheme, "maxWidth");
+  height: map-get($useTheme, "btnMdsHeight");
+  border-radius: 8px;
+  border: none;
+  background-color: map-get($useTheme, "secondaryColor");
+}
+
+@mixin button-comp {
+  width: map-get($useTheme, "maxWidth");
+  height: map-get($useTheme, "btnMdsHeight");
+  border-radius: 8px;
+  border: none;
+  background-color: map-get($useTheme, "primaryColor");
+}
+
 @mixin button-small {
   border-radius: 6px;
   border: none;
@@ -116,4 +137,8 @@ $useTheme: $theme-ncbl;
 }
 @mixin box-shadow-2 {
   box-shadow: map-get($useTheme, "box-shadow-2");
+}
+
+@mixin card-primary {
+  box-shadow: map-get($useTheme, "box-shadow-1");
 }

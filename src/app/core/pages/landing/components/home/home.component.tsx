@@ -1,14 +1,16 @@
 import React from "react";
 import CoopButton from "shared/components/form/button/button.component";
 import styles from "./home.module.scss";
-
+import dashboard from "assets/images/svg/Dashboard.svg";
 
 export default function Home() {
   return (
     <>
       <div className={`row py-5 ${styles["home__wrapper"]}`}>
         <div className={`col-md-12 col-lg-6`}>
-          <h2 className={styles["main__heading"]}>Autonomous association of person</h2>
+          <h2 className={styles["main__heading"]}>
+            Autonomous association of person
+          </h2>
           <div className={`d-flex py-3`}>
             <div className={`d-flex align-items-center`}>
               <span className={`sub-header color-primary fw-600`}>25</span>
@@ -28,9 +30,13 @@ export default function Home() {
             Ipsum has been the industry's standard dummy text ever since the
             1500s.
           </p>
-          <CoopButton className={`button-main`} btnName="Know More" />
+          <div className="d-flex justify-content-center justify-content-md-start">
+            <CoopButton className={`button-main`} btnName="Know More" />
+          </div>
         </div>
-        <div className={`col-6`}>ghdghdfhg</div>
+        <div className={`col-6 d-none d-lg-flex justify-content-end`}>
+          <img src={dashboard} alt="dashboard" className=" w-75 " />
+        </div>
       </div>
     </>
   );
