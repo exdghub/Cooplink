@@ -1,0 +1,14 @@
+@import "styles/abstracts/variables";
+
+.side-nav {
+  text-decoration: none;
+  width: 100%;
+}
+
+.side-nav-link {
+  color: $colorBlack-shade1 !important;
+}
+
+.hamburger {
+  cursor: pointer;
+}

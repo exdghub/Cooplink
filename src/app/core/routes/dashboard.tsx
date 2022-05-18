@@ -1,5 +1,5 @@
 
-import DashLayout from "core/layouts/dashlayout";
+import DashLayout from "core/layouts/dashlayout/dashlayout";
 import React from "react";
 
 const DashboardPage = React.lazy(() => import("modules/dashboard/dashboard.module"))

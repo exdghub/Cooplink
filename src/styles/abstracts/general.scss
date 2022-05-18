@@ -103,6 +103,14 @@
   @include box-shadow-1();
 }
 
+.box-shadow-2 {
+  @include box-shadow-2();
+}
+
+.bg-grey {
+  @include body-bg();
+}
+
 /* width */
 ::-webkit-scrollbar {
   width: 5px;
