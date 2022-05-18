@@ -5,10 +5,12 @@ import CoopInput from "shared/components/form/input/input.component";
 import CoopSelect from "shared/components/form/select/select.component";
 import styles from "./form.module.scss"
 import { breadCrumbsArr } from './breadcrumbs';
+import { useNavigate } from 'react-router-dom';
 
 const CoopToCoopForm = () => {
     const { setNav } = useBreadcrumbs();
     setNav(breadCrumbsArr)
+    const navigate = useNavigate()
 
     return (
         <div className="d-flex justify-content-center justify-content-md-start ">
@@ -46,8 +48,8 @@ const CoopToCoopForm = () => {
                 <div className="col-12 col-md-5">
                     <CoopInput label="Remarks" placeholder="Write down remarks" />
                     <div className="d-flex ">
-                        <CoopButton className="button-secondary" btnName="Back" />
-                        <CoopButton className="button-comp mx-3" btnName="Proceed" />
+                        <CoopButton className="button-secondary" btnName="Back" onClick={() => navigate("/dashboard")} />
+                        <CoopButton className="button-comp mx-3" btnName="Proceed" onClick={() => navigate("/coop-to-coop/confirmation")} />
                     </div>
                 </div>
 

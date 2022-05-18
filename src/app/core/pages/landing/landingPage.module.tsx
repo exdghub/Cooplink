@@ -11,7 +11,7 @@ import NetworkSection from "./components/networks/networks.component";
 import TestimonalsSection from "./components/testimonials/testimonial.component";
 import { useAuth } from "core/utils/auth";
 import { Navigate } from "react-router-dom";
-import cooplogo from "assets/images/cooplogo.svg";
+import cooplogo from "assets/images/cooplogo.png";
 
 export default function LandingPageLayout() {
 

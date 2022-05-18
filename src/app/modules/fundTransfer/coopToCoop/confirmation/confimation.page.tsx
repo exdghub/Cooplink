@@ -3,11 +3,14 @@ import CoopButton from "shared/components/form/button/button.component";
 import { cToCList } from "./cToCDetails.data";
 import { breadCrumbsArr } from './breadcrumbs';
 import { useBreadcrumbs } from 'core/layouts/dashlayout/dashlayout'
+import { useNavigate } from "react-router-dom";
 
 export default function CoopToCoopConfirmation() {
 
   const { setNav } = useBreadcrumbs();
   setNav(breadCrumbsArr)
+
+  const navigate = useNavigate()
 
   return (
     <>
@@ -37,10 +40,12 @@ export default function CoopToCoopConfirmation() {
           <CoopButton
             className="button-secondary col-5 col-md-2 mr-3"
             btnName="Back"
+            onClick={() => navigate("/coop-to-coop/confirmation")}
           />
           <CoopButton
             className="button-comp col-5 col-md-2"
             btnName="Proceed"
+            onClick={() => navigate("/coop-to-coop/success")}
           />
         </div>
       </div>

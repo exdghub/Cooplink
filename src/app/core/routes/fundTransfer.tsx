@@ -1,9 +1,9 @@
 import DashLayout from "core/layouts/dashlayout/dashlayout";
 import React from "react";
 
-const BankToCoopForm = React.lazy(() => import("modules/fundTransfer/bankToCoop/form/form.module"));
-const BankToCoopConfirmation = React.lazy(() => import("modules/fundTransfer/bankToCoop/confirmation/confirmation.module"))
-const BankToCoopSuccess = React.lazy(() => import("modules/fundTransfer/bankToCoop/success/sucess.module"))
+const BankToCoopForm = React.lazy(() => import("modules/fundTransfer/bankToCoop/form/form.page"));
+const BankToCoopConfirmation = React.lazy(() => import("modules/fundTransfer/bankToCoop/confirmation/confirmation.page"))
+const BankToCoopSuccess = React.lazy(() => import("modules/fundTransfer/bankToCoop/success/success.page"))
 
 
 const CoopToCoopForm = React.lazy(() => import("modules/fundTransfer/coopToCoop/form/form.page"))
