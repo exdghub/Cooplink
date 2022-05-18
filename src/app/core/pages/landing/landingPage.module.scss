@@ -1,17 +1,25 @@
-.custom-nav {
-  // justify-content: normal !important;
-  height: 70px;
-}
-
 .btn-toggle{
   border: none !important;
 }
+.custom-nav{
+  transition: 1s all ease;
+}
+.custom-nav-content{
+  margin-top: -70px;
+  padding-top: 70px;
+}
 
+
+.color-change {
+  transition: 1s all ease;
+  background-color: #fff;
+}
 
 ////////////////////////login Modal
 .close-btn {
   display: flex;
   position: absolute;
+  z-index: 9;
   top: 8px;
   right: 8px;
   border: none;
@@ -27,13 +35,6 @@
 .login-modal-content {
   border: none !important;
   border-radius: 20px !important;
+  position: relative;
 }
 
-.custom-nav {
-  justify-content: space-between;
-}
-
-.color-change {
-  transition: 1s all ease;
-  background-color: #eee;
-}

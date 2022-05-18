@@ -19,6 +19,9 @@
 .color-primary {
   @include color-primary();
 }
+.color-gray {
+  @include color-gray();
+}
 .color-secondary {
   @include color-secondary();
 }
@@ -37,6 +40,10 @@
 .bgcolor-secondary {
   @include bgcolor-secondary();
 }
+.bg-login {
+  @include bg-login();
+}
+
 .main-gradient {
   @include main-gradient();
 }
@@ -51,7 +58,14 @@
   @include button-normal();
   @include color-white();
 }
-
+.button-secondary {
+  @include button-secondary();
+  @include color-title();
+}
+.button-comp {
+  @include button-comp();
+  @include color-white();
+}
 .button-small {
   @include button-small();
   @include color-white();

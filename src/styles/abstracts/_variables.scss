@@ -18,6 +18,14 @@ $mainGradient: linear-gradient(
   #ffffff57 100%
 );
 
+$primaryGradient: linear-gradient(
+    180deg,
+    #2abe560f 0%,
+    #e1f5ea14 24%,
+    #ffffff57 100%
+  )
+  0% 0%;
+
 $secondaryGradient: transparent
   linear-gradient(
     180deg,
@@ -46,6 +54,7 @@ $btnSmWidth: 100px;
 $btnHeight: 45px;
 $btnSmHeight: 32px;
 $btnMdHeight: 42px;
+$btnMdsHeight: 40px;
 
 $fw-500: 500;
 $fw-600: 600;

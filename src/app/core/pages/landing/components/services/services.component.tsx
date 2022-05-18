@@ -21,10 +21,10 @@ export default function Services() {
         />
 
         <div className={`row `}>
-          <div className={`col-12 col-sm-4 position-relative`}>
-            <div className={`${styles["custom-img"]} pb-4`}>
+          <div className={`col-12 col-sm-4 `}>
+            <div className={`${styles["custom-img"]} pb-4 position-relative d-flex justify-content-center`}>
               <img src={dummy} alt="ggg" className={`mw-100`} />
-              <img src={serviceChart} alt="service"/>
+              <img src={serviceChart} alt="service" />
             </div>
             <ServiceContent
               title={"Cooperative to Cooperative"}
@@ -34,7 +34,7 @@ export default function Services() {
             />
           </div>
           <div className={`col-12 col-sm-4 `}>
-            <div className={`pt-5 ${styles["custom-img2"]} pb-4`}>
+            <div className={`pt-5 ${styles["custom-img2"]} pb-4 position-relative d-flex justify-content-center`}>
               <img src={dummy} alt="ggg" className={`mw-100`} />
             </div>
             <ServiceContent
@@ -45,7 +45,7 @@ export default function Services() {
             />
           </div>
           <div className={`col-12 col-sm-4 pt-5`}>
-            <div className={`pt-none pt-sm-5 ${styles["custom-img3"]} pb-4`}>
+            <div className={`pt-none pt-sm-5 ${styles["custom-img3"]} pb-4 position-relative d-flex justify-content-center`}>
               <img src={dummy} alt="ggg" className={`mw-100`} />
               <img src={cooperative} alt="ggg" className={`mw-100`} />
               <img src={cooperative} alt="ggg" className={`mw-100`} />

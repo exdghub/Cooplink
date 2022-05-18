@@ -6,11 +6,11 @@ export type LoginReturn = {
 };
 
 const useIsLoggedIn = (): LoginReturn => {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(true);
 
   useEffect(() => {
     // setTimeout(() => {
-    setIsLoggedIn(false);
+    setIsLoggedIn(true);
     // }, 3000);
   }, []);
 

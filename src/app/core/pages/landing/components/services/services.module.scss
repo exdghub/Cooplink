@@ -14,8 +14,8 @@
       object-fit: cover;
       position: absolute;
       box-shadow: 0px 3px 30px #EAEEEB82;
-      left: 3%;
-      top: 12%;   
+      left: 0%;
+      top: 25%;   
     }
   }
 }
@@ -55,8 +55,8 @@
       border-radius: 10px ;
       position: absolute;
       box-shadow: 0px 3px 30px #EAEEEB82;
-      right: 23%;
-      top: 12%;
+      right: 5%;
+      top: 5%;
     }
     &:nth-child(3) {
       width: 130px;
@@ -65,8 +65,8 @@
       border-radius: 10px ;
       box-shadow: 0px 3px 30px #EAEEEB82;
       position: absolute;
-      left: 0%;
-      bottom: 35%;
+      left: -5%;
+      bottom: 0;
     }
   }
 }

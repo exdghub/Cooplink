@@ -2,10 +2,8 @@ import React, { useState } from "react";
 import { InputProps } from "./input.types";
 
 
-
-
 export default function CoopInput(props: InputProps) {
-  const { label, type, name, id, placeholder, errorlabel, inputValue } = props;
+  const { label, type, name, id, placeholder, errorlabel, inputValue, className } = props;
 
   const [showPassword, setShowPassword] = useState(false);
   // const [passwordType, setPasswordType] = useState("password");
@@ -24,7 +22,7 @@ export default function CoopInput(props: InputProps) {
   // }
   return (
     <>
-      <div className="form-group form-inline mb-3">
+      <div className={`form-group mb-3 ${className}`}>
         <label className="form-label px-2 secondary-text" htmlFor={id}>
           {label}
         </label>
@@ -34,6 +32,7 @@ export default function CoopInput(props: InputProps) {
           id={id}
           name={name}
           value={inputValue}
+          
           //   aria-describedby="emailHelp"
           placeholder={placeholder}
         />

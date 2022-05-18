@@ -12,9 +12,9 @@ function App() {
     <>
       {isLoggedIn ? (
         <BrowserRouter>
-          <Header />
+          {/* <Header /> */}
           <RoutePage />
-          <Footer />
+          {/* <Footer /> */}
         </BrowserRouter>
       ) : (
         <BrowserRouter>

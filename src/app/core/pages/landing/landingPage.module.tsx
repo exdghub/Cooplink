@@ -1,5 +1,4 @@
 import styles from "./landingPage.module.scss";
-
 import HowItWorks from "./components/howItWorks/howItWorks.component";
 import Home from "./components/home/home.component";
 import Services from "./components/services/services.component";
@@ -28,13 +27,12 @@ export default function LandingPageLayout() {
     window.addEventListener("scroll", changeBackground);
   });
 
-
   return (
     <>
       <nav
-        className={`navbar navbar-expand-lg navbar-light bg-white bg-md-none fixed-top ${
+        className={`navbar navbar-expand-lg navbar-light bg-md-none fixed-top ${
           navbar ? `navbar ${styles["color-change"]}` : "navbar"
-        }`}
+        } ${styles["custom-nav"]}`}
       >
         <div className="container">
           <a className="navbar-brand order-2 order-md-2" href="/">
@@ -48,11 +46,13 @@ export default function LandingPageLayout() {
             aria-controls="navbarSupportedContent"
             aria-expanded="false"
             aria-label="Toggle navigation"
-
           >
             <span className="navbar-toggler-icon"></span>
           </button>
-          <div className="collapse navbar-collapse order-4" id="navbarSupportedContent">
+          <div
+            className="collapse navbar-collapse order-4"
+            id="navbarSupportedContent"
+          >
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item px-3">
                 <a className={`nav-link custom-navlink`} href="#homeScrollSpy">
@@ -78,22 +78,24 @@ export default function LandingPageLayout() {
                 </a>
               </li>
               <li className="nav-item px-3">
-                <a className={`nav-link custom-navlink`} href="#networkScrollSpy">
+                <a
+                  className={`nav-link custom-navlink`}
+                  href="#networkScrollSpy"
+                >
                   Network
                 </a>
               </li>
             </ul>
-           
           </div>
           <div className={`d-flex order-4`}>
-              <button
-                className={`button-small mx-2 text-uppercase ${styles["button-right"]}`}
-                data-bs-toggle="modal"
-                data-bs-target="#loginModal"
-              >
-                Login
-              </button>
-            </div>
+            <button
+              className={`button-small mx-2 text-uppercase ${styles["button-right"]}`}
+              data-bs-toggle="modal"
+              data-bs-target="#loginModal"
+            >
+              Login
+            </button>
+          </div>
         </div>
       </nav>
 
@@ -101,7 +103,7 @@ export default function LandingPageLayout() {
         data-bs-spy="scroll"
         data-bs-target="#landing-page-nav"
         data-bs-offset="70"
-        className="scrollspy-example"
+        className={`scrollspy-example bg-login ${styles["custom-nav-content"]}`}
         tabIndex={0}
       >
         <div id="homeScrollSpy" className="container">
@@ -137,13 +139,15 @@ export default function LandingPageLayout() {
         aria-hidden="true"
       >
         <div className="modal-dialog modal-dialog-centered modal-lg">
-          <div className={`modal-content ${styles["login-modal-content"]} `}>
+          <div className={`modal-content ${styles["login-modal-content"]}`}>
+            <div className="position-relative">
             <button
               type="button"
-              className={`color-title  ${styles["close-btn"]}`}
+              className={` ${styles["close-btn"]}`}
               data-bs-dismiss="modal"
               aria-label="Close"
             ></button>
+            </div>
             <Login />
           </div>
         </div>

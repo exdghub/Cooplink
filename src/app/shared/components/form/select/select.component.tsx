@@ -3,10 +3,10 @@ import { SelectProps } from "./select.types";
 
 
 export default function CoopSelect(props: SelectProps) {
-  const { text, value, label } = props;
+  const { text, value, label, className } = props;
   return (
     <>
-      <div className="form-group mb-3">
+      <div className={`form-group mb-3 ${className}`}>
         <label className="form-label px-2 secondary-text" htmlFor="formSelect">
           {label}
         </label>
