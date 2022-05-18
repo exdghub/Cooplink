@@ -63,6 +63,10 @@ $useTheme: $theme-ncbl;
 @mixin main-text {
   font-size: map-get($useTheme, "mainText");
 }
+@mixin nav-text {
+  font-size: map-get($useTheme, "navText");
+}
+
 @mixin main-title {
   font-size: map-get($useTheme, "mainTitle");
 }

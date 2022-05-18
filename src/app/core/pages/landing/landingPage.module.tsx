@@ -9,7 +9,7 @@ import { useEffect } from "react";
 import { useState } from "react";
 import NetworkSection from "./components/networks/networks.component";
 import TestimonalsSection from "./components/testimonials/testimonial.component";
-import cooplogo from "assets/images/cooplogo.svg";
+import cooplogo from "assets/images/cooplogo.png";
 
 export default function LandingPageLayout() {
   const [navbar, setNavbar] = useState(false);
@@ -37,7 +37,7 @@ export default function LandingPageLayout() {
       >
         <div className="container">
           <a className="navbar-brand order-2 order-md-2" href="/">
-            <img src={cooplogo} alt=""/>
+            <img src={cooplogo} alt="sss" className={`${styles["custom-logo"]}`}/>
           </a>
           <button
             className={`navbar-toggler order-1 ${styles["btn-toggle"]}`}
