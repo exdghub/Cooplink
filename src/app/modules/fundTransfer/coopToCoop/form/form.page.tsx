@@ -13,7 +13,7 @@ const CoopToCoopForm = () => {
     const navigate = useNavigate()
 
     return (
-        <div className="d-flex justify-content-center justify-content-md-start ">
+        <div className="d-flex justify-content-center">
             {/* <div className={`${styles["custom-coop"]} bg-secondary`} >
         ddddd
       </div> */}

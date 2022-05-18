@@ -15,11 +15,10 @@
 
 .color-change {
   transition: 1s all ease;
-  background-color: #fff;
+  background-color: #ffffff78;
   border-bottom: 1px solid #ddd;
-  opacity: 0.9;
-  -webkit-backdrop-filter: blur(8px);
-  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
 }
 
 ////////////////////////login Modal

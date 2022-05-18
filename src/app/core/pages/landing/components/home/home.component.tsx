@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <>
     <div className="container">
-      <div className={`row py-5 ${styles["home__wrapper"]} container`}>
+      <div className={`row py-5 ${styles["home__wrapper"]}`}>
         <div className={`col-md-12 col-lg-6`}>
           <h2 className={styles["main__heading"]}>
             Autonomous association of person

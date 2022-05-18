@@ -6,7 +6,7 @@ export default function CoopSelect(props: SelectProps) {
   const { text, value, label, className } = props;
   return (
     <>
-      <div className={`form-group mb-3 ${className}`}>
+      <div className={`form-group mb-3 w-100 ${className}`}>
         <label className="form-label px-2 secondary-text" htmlFor="formSelect">
           {label}
         </label>
