@@ -103,6 +103,7 @@ $useTheme: $theme-ncbl;
   width: map-get($useTheme, "maxWidth");
   height: map-get($useTheme, "btnMdsHeight");
   border-radius: 8px;
+  width: 150px;
   border: none;
   background-color: map-get($useTheme, "secondaryColor");
 }
@@ -111,6 +112,7 @@ $useTheme: $theme-ncbl;
   width: map-get($useTheme, "maxWidth");
   height: map-get($useTheme, "btnMdsHeight");
   border-radius: 8px;
+  width: 150px;
   border: none;
   background-color: map-get($useTheme, "primaryColor");
 }

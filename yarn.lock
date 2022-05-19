@@ -1519,6 +1519,11 @@
   dependencies:
     "@sinonjs/commons" "^1.7.0"
 
+"@soywod/pin-field@^0.2.2":
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/@soywod/pin-field/-/pin-field-0.2.2.tgz#60f1e6be27db41d73e0406c20bce8f96c1a6a160"
+  integrity sha512-R0kpLXHn+Nbi3D4Eb0dHNQbx+yYWuvMWxy5hPEoVok+RfpUIpAMrhJQC4Qmg3FkkFrROPejO9VWyPGMID+Dv+Q==
+
 "@surma/rollup-plugin-off-main-thread@^2.2.3":
   version "2.2.3"
   resolved "https://registry.npmjs.org/@surma/rollup-plugin-off-main-thread/-/rollup-plugin-off-main-thread-2.2.3.tgz"
@@ -1843,6 +1848,14 @@
   dependencies:
     "@types/node" "*"
 
+"@types/hoist-non-react-statics@*":
+  version "3.3.1"
+  resolved "https://registry.yarnpkg.com/@types/hoist-non-react-statics/-/hoist-non-react-statics-3.3.1.tgz#1124aafe5118cb591977aeb1ceaaed1070eb039f"
+  integrity sha512-iMIqiko6ooLrTh1joXodJK5X9xeEALT1kM5G3ZLhD3hszxBdIEd5C75U834D9mLcINgD4OyZf5uQXjkuYydWvA==
+  dependencies:
+    "@types/react" "*"
+    hoist-non-react-statics "^3.3.0"
+
 "@types/html-minifier-terser@^6.0.0":
   version "6.1.0"
   resolved "https://registry.npmjs.org/@types/html-minifier-terser/-/html-minifier-terser-6.1.0.tgz"
@@ -2008,6 +2021,15 @@
   version "2.0.1"
   resolved "https://registry.npmjs.org/@types/stack-utils/-/stack-utils-2.0.1.tgz"
   integrity sha512-Hl219/BT5fLAaz6NDkSuhzasy49dwQS/DSdu4MdggFB8zcXv7vflBI3xp7FEmkmdDkBUI2bPUNeMttp2knYdxw==
+
+"@types/styled-components@^5.1.25":
+  version "5.1.25"
+  resolved "https://registry.yarnpkg.com/@types/styled-components/-/styled-components-5.1.25.tgz#0177c4ab5fa7c6ed0565d36f597393dae3f380ad"
+  integrity sha512-fgwl+0Pa8pdkwXRoVPP9JbqF0Ivo9llnmsm+7TCI330kbPIFd9qv1Lrhr37shf4tnxCOSu+/IgqM7uJXLWZZNQ==
+  dependencies:
+    "@types/hoist-non-react-statics" "*"
+    "@types/react" "*"
+    csstype "^3.0.2"
 
 "@types/testing-library__jest-dom@^5.9.1":
   version "5.14.3"
@@ -2792,6 +2814,11 @@ bootstrap-icons@^1.8.1:
   version "1.8.1"
   resolved "https://registry.yarnpkg.com/bootstrap-icons/-/bootstrap-icons-1.8.1.tgz#773c1625bcbf3e86090ea9da4386c2c6459c5582"
   integrity sha512-IXUqislddPJfwq6H+2nTkHyr9epO9h6u1AG0OZCx616w+TgzeoCjfmI3qJMQqt1J586gN2IxzB4M99Ip4sTZ1w==
+
+bootstrap-pincode-input@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/bootstrap-pincode-input/-/bootstrap-pincode-input-3.0.1.tgz#96e0424117400b149f246b43538d563f78fab578"
+  integrity sha512-nKyLq3AxkVvtSaKRD+KUSSZl+LXloWSYttN53vG98ZUDr2tHBlH2qTpSlnl3RkGX3sxJqD9W+dottVZwwa7ygw==
 
 bootstrap@^5.1.3:
   version "5.1.3"
@@ -4668,6 +4695,13 @@ history@^5.2.0:
   integrity sha512-ZqaKwjjrAYUYfLG+htGaIIZ4nioX2L70ZUMIFysS3xvBsSG4x/n1V6TXV3N8ZYNuFGlDirFg32T7B6WOUPDYcQ==
   dependencies:
     "@babel/runtime" "^7.7.6"
+
+hoist-non-react-statics@^3.3.0:
+  version "3.3.2"
+  resolved "https://registry.yarnpkg.com/hoist-non-react-statics/-/hoist-non-react-statics-3.3.2.tgz#ece0acaf71d62c2969c2ec59feff42a4b1a85b45"
+  integrity sha512-/gGivxi8JPKWNm/W0jSmzcMPpfpPLc3dY/6GxhX2hQ9iGj3aDfklV4ET7NjKpSinLpJ5vafa9iiGIEZg10SfBw==
+  dependencies:
+    react-is "^16.7.0"
 
 hoopy@^0.1.4:
   version "0.1.4"
@@ -7265,7 +7299,12 @@ react-icons@^4.3.1:
   resolved "https://registry.yarnpkg.com/react-icons/-/react-icons-4.3.1.tgz#2fa92aebbbc71f43d2db2ed1aed07361124e91ca"
   integrity sha512-cB10MXLTs3gVuXimblAdI71jrJx8njrJZmNMEMC+sQu5B/BIOmlsAjskdqpn81y8UBVEGuHODd7/ci5DvoSzTQ==
 
-react-is@^16.13.1:
+react-input-verification-code@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/react-input-verification-code/-/react-input-verification-code-1.0.1.tgz#a4c19776e38037fe893533a220ed12aa1e5518a1"
+  integrity sha512-QOS8PNMta/yD4joxs7q8R3xdPEbVrS1DyyKTSNEPXo7EU77UGFTdyIlwNA01Acua/cN4wEyxTTOOWNY4N1vwNw==
+
+react-is@^16.13.1, react-is@^16.7.0:
   version "16.13.1"
   resolved "https://registry.npmjs.org/react-is/-/react-is-16.13.1.tgz"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
@@ -7274,6 +7313,16 @@ react-is@^17.0.1:
   version "17.0.2"
   resolved "https://registry.npmjs.org/react-is/-/react-is-17.0.2.tgz"
   integrity sha512-w2GsyukL62IJnlaff/nRegPQR94C/XXamvMWmSHRJ4y7Ts/4ocGRmTHvOs8PSE6pB3dWOrD/nueuU5sduBsQ4w==
+
+react-pin-field@^2.0.0-beta.3:
+  version "2.0.0-beta.3"
+  resolved "https://registry.yarnpkg.com/react-pin-field/-/react-pin-field-2.0.0-beta.3.tgz#7d2767169e86e3da10feb7f176adfd13ae6ba150"
+  integrity sha512-fzOOaqG9ymUnxPYtL6O80Kix1+HhH15ghcOAfTa708vbtEtHBGHXIJ4jS0BCgCaMSlDgPYrifeW235TdjZUk/A==
+
+react-pin-input@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/react-pin-input/-/react-pin-input-1.1.0.tgz#dd73b72820fe94c0353eedbd4c677a64d68d8bbd"
+  integrity sha512-3N9FoSRRlhNqBAc1eErLC8JmagBEgEvbhPYtfl1oq+4tzIanMnX65urHMSvHIn66z+YPrChdNQ+1HShyoga4gg==
 
 react-query@^3.34.17:
   version "3.34.17"

@@ -24,8 +24,8 @@ export default function CoopToCoopSuccess() {
         Your transactions has been successfully done.
       </p>
       <div className="row">
-        <div className="col-md-3"></div>
-        <div className="card col-md-6">
+        <div className="col-none col-md-3"></div>
+        <div className="card col-12 col-md-6">
           <div className="card-body row">
             {successList.map((items, index) => {
               return (
@@ -50,7 +50,7 @@ export default function CoopToCoopSuccess() {
             
           </div>
         </div>
-        <div className="col-md-3"></div>
+        <div className="col-none col-md-3"></div>
       </div>
 
       <CoopButton

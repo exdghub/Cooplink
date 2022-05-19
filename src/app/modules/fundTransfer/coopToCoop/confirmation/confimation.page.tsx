@@ -4,9 +4,13 @@ import { cToCList } from "./cToCDetails.data";
 import { breadCrumbsArr } from './breadcrumbs';
 import { useBreadcrumbs } from 'core/layouts/dashlayout/dashlayout'
 import { useNavigate } from "react-router-dom";
+import Popup from "shared/components/modalPopup/popup.component";
+import CoopMpin from "../confirmPin/confirmPin";
+
 
 export default function CoopToCoopConfirmation() {
 
+  // For breadcrumbs
   const { setNav } = useBreadcrumbs();
   setNav(breadCrumbsArr)
 
@@ -24,10 +28,10 @@ export default function CoopToCoopConfirmation() {
                   <div className="col-12 col-md-6">
                     <div className="row text-start justify-content-between">
                       <div className="col-6">
-                        <p className="color-gray">{item.name}</p>
+                        <p className="color-gray secondary-text">{item.name}</p>
                       </div>
                       <div className="col-6">
-                        <p className="fw-600">{item.detail}</p>
+                        <p className="fw-600 secondary-text">{item.detail}</p>
                       </div>
                     </div>
                   </div>
@@ -36,19 +40,26 @@ export default function CoopToCoopConfirmation() {
             </div>
           </div>
         </div>
-        <div className="pt-5 row w-100 justify-content-center justify-content-md-start">
+        <div className="pt-5 mx-1 row w-100 justify-content-center justify-content-md-start">
           <CoopButton
             className="button-secondary col-5 col-md-2 mr-3"
             btnName="Back"
-            onClick={() => navigate("/coop-to-coop/confirmation")}
+            onClick={() => navigate("/coop-to-coop")}
           />
           <CoopButton
             className="button-comp col-5 col-md-2"
-            btnName="Proceed"
-            onClick={() => navigate("/coop-to-coop/success")}
+            btnName="Proceed"  
+            dataToggle="modal"
+            dataTarget="#confirmationModal"
+            // onClick={() => navigate("/coop-to-coop/success")}
           />
         </div>
       </div>
+
+      <Popup id="confirmationModal" customClass="">
+        <CoopMpin/>
+      </Popup>
+
     </>
   );
 }
