@@ -18,7 +18,7 @@ export default function CoopToCoopConfirmation() {
 
   return (
     <>
-      <div className="">
+      <div className=" p-5 dash-outlet">
         <h5 className="">Details </h5>
         <div className="card">
           <div className="card-body">

@@ -1505,6 +1505,11 @@
   resolved "https://registry.npmjs.org/@rushstack/eslint-patch/-/eslint-patch-1.1.1.tgz"
   integrity sha512-BUyKJGdDWqvWC5GEhyOiUrGNi9iJUr4CU0O2WxJL6QJhHeeA/NVBalH+FeK0r/x/W0rPymXt5s78TDS7d6lCwg==
 
+"@sbmdkl/nepali-date-converter@^1.3.3":
+  version "1.3.3"
+  resolved "https://registry.yarnpkg.com/@sbmdkl/nepali-date-converter/-/nepali-date-converter-1.3.3.tgz#789e2907fe468aa896a88680551f4a13c78c58a8"
+  integrity sha512-exCcohAr2VqJp5EnMQ6uP7jCCS7DvvJZHv0pul1U9j6B1tHvhhCrSaCx/lPhvFHUMMKQ3kqgYvW0xg5TlsUuCQ==
+
 "@sinonjs/commons@^1.7.0":
   version "1.8.3"
   resolved "https://registry.npmjs.org/@sinonjs/commons/-/commons-1.8.3.tgz"
@@ -2814,11 +2819,6 @@ bootstrap-icons@^1.8.1:
   version "1.8.1"
   resolved "https://registry.yarnpkg.com/bootstrap-icons/-/bootstrap-icons-1.8.1.tgz#773c1625bcbf3e86090ea9da4386c2c6459c5582"
   integrity sha512-IXUqislddPJfwq6H+2nTkHyr9epO9h6u1AG0OZCx616w+TgzeoCjfmI3qJMQqt1J586gN2IxzB4M99Ip4sTZ1w==
-
-bootstrap-pincode-input@^3.0.1:
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/bootstrap-pincode-input/-/bootstrap-pincode-input-3.0.1.tgz#96e0424117400b149f246b43538d563f78fab578"
-  integrity sha512-nKyLq3AxkVvtSaKRD+KUSSZl+LXloWSYttN53vG98ZUDr2tHBlH2qTpSlnl3RkGX3sxJqD9W+dottVZwwa7ygw==
 
 bootstrap@^5.1.3:
   version "5.1.3"
@@ -7298,11 +7298,6 @@ react-icons@^4.3.1:
   version "4.3.1"
   resolved "https://registry.yarnpkg.com/react-icons/-/react-icons-4.3.1.tgz#2fa92aebbbc71f43d2db2ed1aed07361124e91ca"
   integrity sha512-cB10MXLTs3gVuXimblAdI71jrJx8njrJZmNMEMC+sQu5B/BIOmlsAjskdqpn81y8UBVEGuHODd7/ci5DvoSzTQ==
-
-react-input-verification-code@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/react-input-verification-code/-/react-input-verification-code-1.0.1.tgz#a4c19776e38037fe893533a220ed12aa1e5518a1"
-  integrity sha512-QOS8PNMta/yD4joxs7q8R3xdPEbVrS1DyyKTSNEPXo7EU77UGFTdyIlwNA01Acua/cN4wEyxTTOOWNY4N1vwNw==
 
 react-is@^16.13.1, react-is@^16.7.0:
   version "16.13.1"

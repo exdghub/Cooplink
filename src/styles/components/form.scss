@@ -9,6 +9,20 @@
 }
 
 .form-control {
-  border-radius: 8px !important;
+  border-radius: 5px !important;
   font-size: $secondaryText !important;
+}
+
+input:focus {
+  outline:none !important;
+}
+
+.button-toggle{
+  @include button-toggle();
+  @include color-gray();
+}
+
+.button-toggle:hover {
+  @include bg-gray();
+  @include color-white();
 }

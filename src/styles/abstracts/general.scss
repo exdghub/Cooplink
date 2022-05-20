@@ -124,6 +124,12 @@
 .bg-grey {
   @include body-bg();
 }
+.bg-main{
+  @include bgcolor-main();
+}
+.dash-outlet{
+  @include dash__outlet();
+}
 
 /* width */
 ::-webkit-scrollbar {
@@ -146,3 +152,4 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #666;
 }
+

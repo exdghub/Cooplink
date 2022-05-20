@@ -15,7 +15,7 @@ export default function CoopToCoopSuccess() {
   const navigate = useNavigate();
 
   return (
-    <div className={`${styles["custom-success"]}`}>
+    <div className={`p-5 ${styles["custom-success"]} dash-outlet`}>
       <img src={success} alt="" className="mb-3"/>
       <p className="main-text fw-700 color-title text-center">
         Successfully Done

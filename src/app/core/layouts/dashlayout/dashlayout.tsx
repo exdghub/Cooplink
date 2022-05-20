@@ -9,13 +9,18 @@ import { navitems } from "./components/sidenav/sidenav.data";
 import { BreadCrumbCtxType } from "./types/breadCrumbsCtx.types";
 import styles from "./dashlayout.module.scss";
 
+export type DashboardProps =
+{
+  isPlainBackground?:boolean
+}
 // Create a global context to access the breadcrumbs and manipulate them
 const BreadCrumbCtx = React.createContext<BreadCrumbCtxType>({
   nav: [],
   setNav: () => {},
 });
 
-const DashLayout: React.FC = (): JSX.Element => {
+const DashLayout: React.FC<DashboardProps> = (props): JSX.Element => {
+  const{isPlainBackground= false} = props
   // Create a state to store and change the breadcrumbs refrencing them to the global context we created
   const [breadcrumbNav, setBreadcrumbNav] = useState<
     { label: string; url: string }[]
@@ -51,7 +56,7 @@ const DashLayout: React.FC = (): JSX.Element => {
                 <div className="py-3 px-5">
                   <DashBreadcrumbs breadcrumb={breadcrumbNav} />
                 </div>
-                <div className={`p-5 bg-white mx-5 ${styles["dash__outlet"]}`}>
+                <div className={`mx-5 ${isPlainBackground === true? ``: `bg-white`} `}>
                   <Outlet />
                 </div>
               </React.Suspense>
@@ -70,3 +75,5 @@ export const useBreadcrumbs = () => {
 };
 
 export default DashLayout;
+
+

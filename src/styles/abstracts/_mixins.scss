@@ -27,6 +27,9 @@ $useTheme: $theme-ncbl;
 @mixin bgcolor-primary {
   background-color: map-get($useTheme, "footerColor");
 }
+@mixin bgcolor-main {
+  background-color: map-get($useTheme, "bgcolorPrimary");
+}
 @mixin bgcolor-secondary {
   background-color: map-get($useTheme, "bgcolorSecondary");
 }
@@ -133,6 +136,13 @@ $useTheme: $theme-ncbl;
   height: map-get($useTheme, "btnMdHeight");
 }
 
+@mixin button-toggle {
+  border-radius: 5px;
+  width: 55px;
+  border: 1px solid map-get($useTheme, "secondaryColor");
+  background: transparent;
+}
+
 @mixin custom-navlink {
   text-transform: uppercase;
   background-color: transparent !important;
@@ -147,4 +157,12 @@ $useTheme: $theme-ncbl;
 
 @mixin card-primary {
   box-shadow: map-get($useTheme, "box-shadow-1");
+}
+
+@mixin bg-gray {
+  background-color: map-get($useTheme, "secondaryColor");
+}
+
+@mixin dash__outlet{
+  border-radius: 8px;
 }
