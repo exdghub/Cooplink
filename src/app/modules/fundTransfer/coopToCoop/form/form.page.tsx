@@ -52,9 +52,6 @@ const CoopToCoopForm = () => {
                         <CoopButton className="button-comp mx-3" btnName="Proceed" onClick={() => navigate("/coop-to-coop/confirmation")} />
                     </div>
                 </div>
-
-
-
             </div>
         </div>
     )

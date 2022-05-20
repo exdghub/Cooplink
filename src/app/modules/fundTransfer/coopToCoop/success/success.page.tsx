@@ -58,7 +58,7 @@ export default function CoopToCoopSuccess() {
         btnName="Dashboard"
         onClick={() => navigate("/dashboard")}
       />
-      <p className="color-primary mt-3">
+      <p role={'button'} className="color-primary mt-3">
       <FontAwesomeIcon icon={faArrowDown} />  Download PDF
       </p>
     </div>
