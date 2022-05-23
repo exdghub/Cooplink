@@ -42,7 +42,7 @@ const CoopDate = (props: DateProps) => {
       </label>
       <div className={`d-flex`}>
         <input
-          type={"text"}
+          type={"date"}
           className="form-control secondary-text"
           id={id}
           name={name}

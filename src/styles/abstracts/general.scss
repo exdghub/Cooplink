@@ -43,6 +43,9 @@
 .bg-login {
   @include bg-login();
 }
+.button-paginate{
+  @include button-paginate();
+}
 
 .main-gradient {
   @include main-gradient();

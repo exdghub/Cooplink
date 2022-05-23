@@ -3,7 +3,7 @@
 .dash__container {
   background-color: $clr-grey-100;
   .dash__sidenav {
-    width: 300px;
+    width: 250px;
     position: fixed;
     z-index: 1;
     top: 0;
@@ -13,7 +13,7 @@
     padding-top: 20px;
   }
   .dash__content {
-    margin-left: 300px;
+    margin-left: 250px;
     .dash__outlet{
       border-radius: 8px;
     }

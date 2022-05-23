@@ -136,6 +136,14 @@ $useTheme: $theme-ncbl;
   height: map-get($useTheme, "btnMdHeight");
 }
 
+@mixin button-paginate {
+  border-radius: 6px;
+  border: 1px solid map-get($useTheme, "secondaryColor") !important;
+  background-color: transparent;
+  // width: map-get($useTheme, "btnSmWidth");
+  height: map-get($useTheme, "btnXsHeight");
+}
+
 @mixin button-toggle {
   border-radius: 5px;
   width: 55px;

@@ -13,8 +13,10 @@
   font-size: $secondaryText !important;
 }
 
-input:focus {
-  outline:none !important;
+.form-control:focus {
+  outline: 0 !important;
+  border-color: initial ;
+  box-shadow: none !important;
 }
 
 .button-toggle{
@@ -25,4 +27,23 @@ input:focus {
 .button-toggle:hover {
   @include bg-gray();
   @include color-white();
+}
+
+.custom-search-border{
+  border-top-left-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+}
+
+.custom-filter-select{
+  height: 32px !important;
+}
+
+.table th{
+  border-top: 0 !important;
+}
+.table td{
+  line-height: 2.5;
+}
+.custom-tblHeader{
+  font-weight: 500 !important;
 }

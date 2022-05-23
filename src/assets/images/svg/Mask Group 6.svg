@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="15.306" height="15.307" viewBox="0 0 15.306 15.307">
+  <defs>
+    <clipPath id="clip-path">
+      <path id="Combined_Shape" data-name="Combined Shape" d="M14.148,15.306l-3.6-3.6a6.478,6.478,0,0,1-4.007,1.38,6.545,6.545,0,1,1,6.545-6.545,6.477,6.477,0,0,1-1.381,4.007l3.6,3.6L14.15,15.306h0ZM1.637,6.546A4.909,4.909,0,1,0,6.546,1.637,4.915,4.915,0,0,0,1.637,6.546Zm6.545,0A1.629,1.629,0,0,0,7.7,5.388a1.672,1.672,0,0,0-2.312,0L4.234,4.232a3.345,3.345,0,0,1,4.624,0,3.255,3.255,0,0,1,.96,2.314Z" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="Mask_Group_6" data-name="Mask Group 6" clip-path="url(#clip-path)">
+    <path id="_color" data-name="🎨 color" d="M0,0H24V24H0Z" transform="translate(-3.818 -3.818)" fill="#23263b"/>
+  </g>
+</svg>
