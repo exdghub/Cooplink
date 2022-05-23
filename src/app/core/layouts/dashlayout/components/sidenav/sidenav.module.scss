@@ -7,7 +7,15 @@
 
 .side-nav-link {
   color: $colorBlack-shade1 !important;
+  &:hover {
+    color: $colorPrimary !important;
+    text-decoration: none;
+  }
+  &:active{
+    background-color: $colorLightPrimary;
+  }
 }
+
 
 .hamburger {
   cursor: pointer;

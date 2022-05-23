@@ -1,6 +1,7 @@
 @import "styles/abstracts/variables";
 
 .breadcrumb {
+  cursor: pointer;
   .breadcrumb-url {
     text-decoration: none;
     color: $colorBlack-shade1;

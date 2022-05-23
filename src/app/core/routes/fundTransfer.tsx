@@ -14,14 +14,14 @@ const CoopToCoopSuccess = React.lazy(() => import("modules/fundTransfer/coopToCo
 export const fundTransferRoutes = [
   {
     path: "/bank-to-coop",
-    element: <DashLayout />,
+    element: <DashLayout isPlainBackground={true}/>,
     children: [{ index: true, element: <BankToCoopForm /> },
     { path: "confirmation", element: <BankToCoopConfirmation /> },
     { path: "success", element: <BankToCoopSuccess /> },],
   },
   {
     path: "/coop-to-coop",
-    element: <DashLayout />,
+    element: <DashLayout isPlainBackground={true} />,
     children: [{ index: true, element: <CoopToCoopForm /> },
     { path: "confirmation", element: <CoopToCoopConfirmation /> },
     { path: "success", element: <CoopToCoopSuccess /> }]

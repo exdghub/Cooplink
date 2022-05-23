@@ -6,6 +6,7 @@ import { dashboardRoutes } from "./dashboard";
 import { fundTransferRoutes } from "./fundTransfer";
 import { reportRoutes } from "./reports";
 import { landingRoutes } from "./landing";
+import { actionButtonRoutes } from "./actionButtonTable";
 
 const PageNotFound = React.lazy(() => import("core/pages/notfound/notfound.module"));
 
@@ -14,6 +15,8 @@ export const routes: RouteObject[] = [
     dashboardRoutes,
     ...fundTransferRoutes,
     ...reportRoutes,
+    ...actionButtonRoutes,
+
     {
         path: "*",
         element: <React.Suspense fallback="...Loading"><PageNotFound /></React.Suspense>

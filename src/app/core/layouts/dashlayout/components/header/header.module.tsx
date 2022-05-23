@@ -6,7 +6,7 @@ import man from "assets/images/man.jpg";
 const DashHeader = () => {
   const auth = useAuth();
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-white py-3 px-5">
+    <nav className="navbar navbar-expand-lg navbar-light bg-white py-2 px-5">
       <NavLink to="/dashboard" className="navbar-brand">
         Infodevelopers
       </NavLink>
@@ -22,8 +22,8 @@ const DashHeader = () => {
         <img
           src={man}
           alt={auth.user}
-          width="60"
-          height="60"
+          width="40"
+          height="40"
           className="rounded-circle ml-3"
           style={{ objectFit: "cover" }}
         />

@@ -54,7 +54,7 @@ export const navitems = [
         subitems: [
           {
             name: "Audit Report",
-            to: "/audit-report",
+            to: "/action-button-table",
             img: faStar,
           },
           {

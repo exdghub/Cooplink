@@ -9,7 +9,7 @@ import { tableHeaderList } from "./tableHeaderList.data";
 
 export default function TableComp() {
   return (
-    <div className="pt-4">
+    <div className="">
       <table
         className="table table-reponsive"
         data-bs-show-header="true"
@@ -18,8 +18,8 @@ export default function TableComp() {
         data-bs-page-list="[5, 10, 25, 50, 100, ALL]"
         data-bs-page-size="5"
       >
-        <thead className="px-5">
-          <tr className="pl-5">
+        <thead className="">
+          <tr className="">
             {tableHeaderList?.map((item: any, index: any) => (
               <th
                 scope="col"
@@ -31,10 +31,10 @@ export default function TableComp() {
             ))}
           </tr>
         </thead>
-        <tbody className="px-5">
+        <tbody className="">
           {tableList?.map((item: any, index: any) => (
             <tr className="secondary-text">
-              <td key={index} className="pl-5">
+              <td key={index} className="">
                 {item.id}
               </td>
               <td>{item.txnId}</td>
@@ -47,17 +47,6 @@ export default function TableComp() {
               <td>{item.serviceCharge}</td>
             </tr>
           ))}
-          {/* <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td colSpan={2}> Larry the Bird</td>
-            <td>@twitter</td>
-          </tr> */}
         </tbody>
       </table>
       <div className="d-flex justify-content-between px-5">

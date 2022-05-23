@@ -24,6 +24,10 @@ $useTheme: $theme-ncbl;
 @mixin color-border {
   color: map-get($useTheme, "colorGray");
 }
+
+@mixin color-light-primary {
+  background-color: map-get($useTheme, "colorLightPrimary");
+}
 @mixin bgcolor-primary {
   background-color: map-get($useTheme, "footerColor");
 }

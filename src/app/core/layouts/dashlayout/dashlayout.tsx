@@ -41,7 +41,7 @@ const DashLayout: React.FC<DashboardProps> = (props): JSX.Element => {
     <BreadCrumbCtx.Provider
       value={{ nav: breadcrumbNav, setNav: setBreadcrumbNav }}
     >
-      <div className="container-fluid bg-grey ">
+      <div className="bg-grey ">
         <div className={styles["dash__container"]}>
           <div className={styles["dash__sidenav"]}>
             <SideNav menu={navitems} />
@@ -53,7 +53,7 @@ const DashLayout: React.FC<DashboardProps> = (props): JSX.Element => {
               style={{ minHeight: `calc(100vh - 130px)` }}
             >
               <React.Suspense fallback="...Loading">
-                <div className="py-3 px-5">
+                <div className="py-2 px-5">
                   <DashBreadcrumbs breadcrumb={breadcrumbNav} />
                 </div>
                 <div className={`mx-5 ${isPlainBackground === true? ``: `bg-white`} `}>

@@ -1,24 +1,22 @@
 import React from "react";
 import CoopButton from "shared/components/form/button/button.component";
 import { cToCList } from "./cToCDetails.data";
-import { breadCrumbsArr } from './breadcrumbs';
-import { useBreadcrumbs } from 'core/layouts/dashlayout/dashlayout'
+import { breadCrumbsArr } from "./breadcrumbs";
+import { useBreadcrumbs } from "core/layouts/dashlayout/dashlayout";
 import { useNavigate } from "react-router-dom";
 import Popup from "shared/components/modalPopup/popup.component";
 import CoopMpin from "../confirmPin/confirmPin";
 
-
 export default function CoopToCoopConfirmation() {
-
   // For breadcrumbs
   const { setNav } = useBreadcrumbs();
-  setNav(breadCrumbsArr)
+  setNav(breadCrumbsArr);
 
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   return (
     <>
-      <div className=" p-5 dash-outlet">
+      <div className=" p-5 bg-white dash-outlet">
         <h5 className="">Details </h5>
         <div className="card">
           <div className="card-body">
@@ -48,7 +46,7 @@ export default function CoopToCoopConfirmation() {
           />
           <CoopButton
             className="button-comp col-5 col-md-2"
-            btnName="Proceed"  
+            btnName="Proceed"
             dataToggle="modal"
             dataTarget="#confirmationModal"
             // onClick={() => navigate("/coop-to-coop/success")}
@@ -57,9 +55,8 @@ export default function CoopToCoopConfirmation() {
       </div>
 
       <Popup id="confirmationModal" customClass="">
-        <CoopMpin/>
+        <CoopMpin />
       </Popup>
-
     </>
   );
 }

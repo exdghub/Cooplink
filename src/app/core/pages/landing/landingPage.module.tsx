@@ -12,6 +12,8 @@ import TestimonalsSection from "./components/testimonials/testimonial.component"
 import { useAuth } from "core/utils/auth";
 import { Navigate } from "react-router-dom";
 import cooplogo from "assets/images/cooplogo.png";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTimes } from "@fortawesome/free-solid-svg-icons";
 
 export default function LandingPageLayout() {
 
@@ -157,7 +159,9 @@ export default function LandingPageLayout() {
                 className={` ${styles["close-btn"]}`}
                 data-bs-dismiss="modal"
                 aria-label="Close"
-              ></button>
+              >
+                <FontAwesomeIcon icon={faTimes} className="color-title"/> 
+              </button>
             </div>
             <Login />
           </div>
