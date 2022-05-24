@@ -7,10 +7,11 @@ import { faBars } from "@fortawesome/free-solid-svg-icons";
 import styles from "./sidenav.module.scss";
 
 const SideNav = (props: SideNavProps) => {
-  const { menu } = props;
+  const { menu, openSideBar, onsideBarNav } = props;
+  console.log("openSideBar", openSideBar);
   const [mobileView, setMobileView] = useState(false);
   const [tabView, setTabView] = useState(false);
-  const [showSideBar, setShowSideBar] = useState(true);
+  const [showSideBar, setShowSideBar] = useState(false);
 
   // For the responsive sidebar
   const updateViewState = () => {
@@ -51,20 +52,26 @@ const SideNav = (props: SideNavProps) => {
 
   // Toggle the side nav based on viewport size
   const toggleSideNav = () => {
-    if (mobileView) {
-    }
+    // if (mobileView) {
+    // }
+    setShowSideBar(!showSideBar);
+    console.log("toggle-----", showSideBar);
   };
 
   console.log("mobile view", mobileView);
+  // ${showSideBar? "": `${styles["custom-sidebar"]}`}
 
   return (
-    <div className="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
+    <div
+      className={`d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100  `}
+    >
       <div className="d-flex align-items-center justify-content-between w-100 pb-3 mb-md-0 me-md-auto text-dark ">
-        <span className="fs-5 ">Cooplink</span>
+        {/* <span className="fs-5 ">Cooplink</span> */}
+
         <FontAwesomeIcon
           icon={faBars}
           className={styles["hamburger"]}
-          onClick={toggleSideNav}
+          onClick={onsideBarNav}
         />
       </div>
 
@@ -82,7 +89,7 @@ const SideNav = (props: SideNavProps) => {
                       <FontAwesomeIcon icon={item.img} />
                       {/* <img src={item.img} alt={item.name} /> */}
                       <span className="ms-1 d-none d-sm-inline">
-                        {item.name}
+                        {openSideBar ? item.name : ""}
                       </span>
                     </div>
                   </NavLink>
@@ -92,15 +99,19 @@ const SideNav = (props: SideNavProps) => {
               {/* For menu items */}
               {item.type === "nested" && (
                 <div className="py-2">
-                  <li className="nav-item d-none d-sm-block">
-                    <div
-                      className={`nav-link align-middle px-0 ${styles["side-nav-link"]}`}
-                    >
-                      <span className="ms-1 text-uppercase d-none d-sm-inline">
-                        {item.title}
-                      </span>
-                    </div>
-                  </li>
+                  {openSideBar ? (
+                    <li className="nav-item d-none d-sm-block">
+                      <div
+                        className={`nav-link align-middle px-0 ${styles["side-nav-link"]}`}
+                      >
+                        <span className="ms-1 text-uppercase d-none d-sm-inline">
+                          {item.title}
+                        </span>
+                      </div>
+                    </li>
+                  ) : (
+                    ""
+                  )}
 
                   {item.children.map((child: any, index: any) => {
                     return (
@@ -118,7 +129,7 @@ const SideNav = (props: SideNavProps) => {
                                 <FontAwesomeIcon icon={child.img} />
                                 {/* <img src={child.img} alt={child.name} /> */}
                                 <span className="ms-1 d-none d-sm-inline">
-                                  {child.name}
+                                  {openSideBar ? child.name : ""}
                                 </span>
                               </div>
                             </NavLink>
@@ -135,9 +146,14 @@ const SideNav = (props: SideNavProps) => {
                               className={`nav-link px-0 align-middle ${styles["side-nav-link"]}`}
                             >
                               <FontAwesomeIcon icon={child.img} />
-                              <span className="ms-1 d-none d-sm-inline">
-                                {child.parent}
-                              </span>
+                              {openSideBar ? (
+                                <span className="ms-1 d-none d-sm-inline">
+                                  {child.parent}
+                                </span>
+                              ) : (
+                                ""
+                              )}
+
                               <span className="mr-0">
                                 {" "}
                                 <FontAwesomeIcon icon={faAngleDown} />
@@ -163,7 +179,7 @@ const SideNav = (props: SideNavProps) => {
                                           <FontAwesomeIcon icon={faStar} />
                                           {/* <img src={subitem.img} alt={subitem.name} /> */}
                                           <span className="ms-1 d-none d-sm-inline">
-                                            {subitem.name}
+                                            {openSideBar ? subitem.name : ""}
                                           </span>
                                         </div>
                                       </NavLink>

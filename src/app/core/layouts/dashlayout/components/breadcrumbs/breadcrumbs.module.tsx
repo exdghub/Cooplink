@@ -7,7 +7,7 @@ const DashBreadcrumbs = (props: DashBreadCrumbsType) => {
     const { breadcrumb } = props;
     return (
         <nav aria-label="breadcrumb">
-            <ol className="breadcrumb m-0 py-2">
+            <ol className="breadcrumb m-0 py-2 bg-none">
                 {breadcrumb.map((path: any, key: any, row: any) => {
                     const isLast: boolean = key + 1 === row.length;
                     if (path.url !== "" || path.label !== "") {

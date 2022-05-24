@@ -1,4 +1,6 @@
 export interface SideNavProps {
+  openSideBar?: boolean;
+  onsideBarNav?:() => void;
   menu: {
     type: string; // "single" | "nested"
     // In case of single

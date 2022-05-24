@@ -12,6 +12,7 @@ import styles from "./dashlayout.module.scss";
 export type DashboardProps =
 {
   isPlainBackground?:boolean
+  openSideBar?: boolean
 }
 // Create a global context to access the breadcrumbs and manipulate them
 const BreadCrumbCtx = React.createContext<BreadCrumbCtxType>({
@@ -20,7 +21,7 @@ const BreadCrumbCtx = React.createContext<BreadCrumbCtxType>({
 });
 
 const DashLayout: React.FC<DashboardProps> = (props): JSX.Element => {
-  const{isPlainBackground= false} = props
+  const{isPlainBackground= false, openSideBar} = props
   // Create a state to store and change the breadcrumbs refrencing them to the global context we created
   const [breadcrumbNav, setBreadcrumbNav] = useState<
     { label: string; url: string }[]
@@ -30,7 +31,13 @@ const DashLayout: React.FC<DashboardProps> = (props): JSX.Element => {
       url: "/dashboard",
     },
   ]);
-
+  const [showSideNav, setShowSideNav] = useState(true)
+  
+  const handleToggle =()=>{
+    setShowSideNav(!showSideNav)
+    console.log("---------------tttt", showSideNav)
+  }
+  
   // If user is not logged in then navigate to the home page
   const { user } = useAuth();
   if (!user) {
@@ -41,13 +48,13 @@ const DashLayout: React.FC<DashboardProps> = (props): JSX.Element => {
     <BreadCrumbCtx.Provider
       value={{ nav: breadcrumbNav, setNav: setBreadcrumbNav }}
     >
-      <div className="bg-grey ">
+      <div className="">
         <div className={styles["dash__container"]}>
-          <div className={styles["dash__sidenav"]}>
-            <SideNav menu={navitems} />
+          <div className={` ${showSideNav? `${styles["dash__sidenav"]}` : `${styles["toggle-sidenav"]}`} `}>
+            <SideNav menu={navitems} onsideBarNav={handleToggle} openSideBar={showSideNav} />
           </div>
           <div className={styles["dash__content"]}>
-            <DashHeader />
+            <DashHeader/>
             <div
               className="d-flex flex-column"
               style={{ minHeight: `calc(100vh - 130px)` }}

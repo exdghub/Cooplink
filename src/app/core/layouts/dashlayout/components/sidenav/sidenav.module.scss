@@ -4,7 +4,9 @@
   text-decoration: none;
   width: 100%;
 }
-
+.custom-sidebar{
+  width: 60px;
+}
 .side-nav-link {
   color: $colorBlack-shade1 !important;
   &:hover {
