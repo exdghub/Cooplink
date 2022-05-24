@@ -54,14 +54,14 @@ const DashLayout: React.FC<DashboardProps> = (props): JSX.Element => {
             <SideNav menu={navitems} onsideBarNav={handleToggle} openSideBar={showSideNav} />
           </div>
           <div className={styles["dash__content"]}>
-            <DashHeader/>
+            <DashHeader onSidebarNav={handleToggle} openSideBar={showSideNav}/>
             <div
-              className="d-flex flex-column"
+              className="container-fluid d-flex flex-column"
               style={{ minHeight: `calc(100vh - 130px)` }}
             >
               <React.Suspense fallback="...Loading">
                 <div className="py-2 px-5">
-                  <DashBreadcrumbs breadcrumb={breadcrumbNav} />
+                  <DashBreadcrumbs breadcrumb={breadcrumbNav}/>
                 </div>
                 <div className={`mx-5 ${isPlainBackground === true? ``: `bg-white`} `}>
                   <Outlet />

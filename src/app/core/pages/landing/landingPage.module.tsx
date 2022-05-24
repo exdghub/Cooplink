@@ -11,9 +11,9 @@ import NetworkSection from "./components/networks/networks.component";
 import TestimonalsSection from "./components/testimonials/testimonial.component";
 import { useAuth } from "core/utils/auth";
 import { Navigate } from "react-router-dom";
-import cooplogo from "assets/images/cooplogo.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
+import Logo from "shared/components/logo/logo.component";
 
 export default function LandingPageLayout() {
 
@@ -49,7 +49,7 @@ export default function LandingPageLayout() {
       >
         <div className="container">
           <a className="navbar-brand order-2 order-md-2" href="/">
-            <img src={cooplogo} alt="sss" className={`${styles["custom-logo"]}`}/>
+            <Logo/>
           </a>
           <button
             className={`navbar-toggler order-1 ${styles["btn-toggle"]}`}

@@ -2,11 +2,27 @@ import { useAuth } from "core/utils/auth";
 import React from "react";
 import { NavLink } from "react-router-dom";
 import man from "assets/images/man.jpg";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { DashHeaderProps } from "./header.types";
 
-const DashHeader = () => {
+const DashHeader = (props: DashHeaderProps) => {
+  const { onSidebarNav, openSideBar } = props;
+
   const auth = useAuth();
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-white py-2 px-5">
+      {!openSideBar ? (
+        <FontAwesomeIcon
+          icon={faBars}
+          className=""
+          role={"button"}
+          onClick={onSidebarNav}
+        />
+      ) : (
+        ""
+      )}
+
       <NavLink to="/dashboard" className="navbar-brand">
         Infodevelopers
       </NavLink>
