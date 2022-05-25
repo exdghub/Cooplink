@@ -3,12 +3,14 @@
 .side-nav {
   text-decoration: none;
   width: 100%;
+  transition: 0.5s all ease;
 }
 .custom-sidebar{
   width: 60px;
 }
 .side-nav-link {
   color: $colorBlack-shade1 !important;
+  transition: 0.5s all ease;
   &:hover {
     color: $colorPrimary !important;
     text-decoration: none;
@@ -18,7 +20,11 @@
   }
 }
 
+.logo__sidenav{
+  transition: 0.5s all ease;
+}
 
 .hamburger {
   cursor: pointer;
+  transition: 0.5s all ease;
 }

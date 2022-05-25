@@ -1,8 +1,8 @@
 export interface SideNavProps {
   openSideBar?: boolean;
   onsideBarNav?:() => void;
-  menu: {
-    type: string; // "single" | "nested"
+  menu?: {
+    type?: string; // "single" | "nested"
     // In case of single
     name?: string;
     img?: any;
@@ -10,7 +10,7 @@ export interface SideNavProps {
     // In case of nested
     title?: string;
     children?: {
-      type: string; //"one" | "many"
+      type?: string; //"one" | "many"
       // In case of one
       name?: string;
       to?: string;
@@ -20,9 +20,9 @@ export interface SideNavProps {
       parent?: string;
       url?: string;
       subItems?: {
-        name: string;
-        to: string;
-        img: any;
+        name?: string;
+        to?: string;
+        img?: any;
       }[];
     }[];
   }[];

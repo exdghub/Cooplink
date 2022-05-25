@@ -21,31 +21,31 @@ const CoopToCoopForm = () => {
         className={`row d-flex justify-content-between ${styles["custom-ctoc"]}`}
       >
         <h5 className="">Coop to Coop Transfer</h5>
-        <div className="col-12 col-md-5">
+        <div className="col-12 col-lg-5">
           <CoopSelect label="Source Account Name" />
         </div>
-        <div className="col-12 col-md-5">
+        <div className="col-12 col-lg-5">
           <CoopSelect label="Destination Co-operative Name" />
         </div>
-        <div className="col-12 col-md-5">
+        <div className="col-12 col-lg-5">
           <CoopInput
             label="Destination Account name"
             placeholder="Enter Account Name"
           />
         </div>
-        <div className="col-12 col-md-5">
+        <div className="col-12 col-lg-5">
           <CoopInput
             label="Destination Account Number"
             placeholder="Enter Account Number"
           />
         </div>
-        <div className="col-12 col-md-5">
+        <div className="col-12 col-lg-5">
           <CoopInput label="Amount" placeholder="Enter Amount" />
         </div>
-        <div className="col-12 col-md-5">
+        <div className="col-12 col-lg-5">
           <CoopSelect label="Purpose" />
         </div>
-        <div className="col-12 col-md-5">
+        <div className="col-12 col-lg-5">
           <CoopInput label="Remarks" placeholder="Write down remarks" />
           <div className="d-flex ">
             <CoopButton
