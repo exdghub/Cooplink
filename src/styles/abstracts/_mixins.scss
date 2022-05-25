@@ -31,6 +31,9 @@ $useTheme: $theme-ncbl;
 @mixin bgcolor-primary {
   background-color: map-get($useTheme, "footerColor");
 }
+@mixin bgcolor-green{
+  background-color: map-get($useTheme, "primaryColor");
+}
 @mixin bgcolor-main {
   background-color: map-get($useTheme, "bgcolorPrimary");
 }

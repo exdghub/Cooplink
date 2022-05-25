@@ -1,22 +1,29 @@
 @import "styles/abstracts/variables";
 
 .dash__container {
-  background-color: $clr-grey-100;
+  // background-color: $clr-grey-100;
   display: flex;
+  height: 100vh;
+  overflow: hidden;
+  // position: sticky;
+  z-index: -1;
   .dash__sidenav {
     width: 230px;
     // position: fixed;
+    height: 100vh;
     z-index: 1;
     top: 0;
     left: 0;
     background-color: $colorWhite;
-    overflow-x: hidden;
+    overflow: hidden;
+    overflow-y: scroll;
     padding-top: 8px;
     transition: 0.5s all ease;
   }
   .dash__content {
     // margin-left: 230px;
     flex: 1;
+    overflow-y: scroll;
     .dash__outlet{
       border-radius: 8px;
     }
@@ -34,3 +41,28 @@
   transition: 0.5s all ease;
 }
 
+
+.mobile-sidenav{
+  width: 0;
+}
+
+@media (max-width: 821px) {
+  .toggle-sidenav{
+    width: 0px;
+    // transition: 0.5s all ease;
+  }
+  .dash__sidenav {
+    position: fixed;
+    transition: 0.5s all ease;
+    
+  }
+  
+}  
+
+
+.dash__sidenav::-webkit-scrollbar{
+  display: none;
+}
+.toggle-sidenav::-webkit-scrollbar {
+  display: none;
+ }

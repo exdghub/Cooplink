@@ -8,6 +8,7 @@ import DashHeader from "./components/header/header.module";
 import { navitems } from "./components/sidenav/sidenav.data";
 import { BreadCrumbCtxType } from "./types/breadCrumbsCtx.types";
 import styles from "./dashlayout.module.scss";
+import { useEffect } from "react";
 
 export type DashboardProps = {
   isPlainBackground?: boolean;
@@ -18,8 +19,6 @@ const BreadCrumbCtx = React.createContext<BreadCrumbCtxType>({
   nav: [],
   setNav: () => {},
 });
-
-
 
 const DashLayout: React.FC<DashboardProps> = (props): JSX.Element => {
   const { isPlainBackground = false, openSideBar } = props;
@@ -33,11 +32,30 @@ const DashLayout: React.FC<DashboardProps> = (props): JSX.Element => {
     },
   ]);
   const [showSideNav, setShowSideNav] = useState(true);
-
+  
   const handleToggle = () => {
     setShowSideNav(!showSideNav);
     console.log("---------------tttt", showSideNav);
   };
+
+  const [width, setWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    function handleResize() {
+      setWidth(window.innerWidth);
+    }
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, [width]);
+
+  useEffect(() => {
+    width < 821 && handleSideNavToggle();
+  },[width]);
+
+  function handleSideNavToggle() {
+    setWidth(width)
+    
+  }
 
   // If user is not logged in then navigate to the home page
   const { user } = useAuth();
@@ -45,12 +63,11 @@ const DashLayout: React.FC<DashboardProps> = (props): JSX.Element => {
     return <Navigate to="/" />;
   }
 
-
   return (
     <BreadCrumbCtx.Provider
       value={{ nav: breadcrumbNav, setNav: setBreadcrumbNav }}
     >
-      <div className="">
+      <div className="container-fluid bg-grey m-0 p-0">
         <div className={styles["dash__container"]}>
           <div
             className={` ${
@@ -64,20 +81,19 @@ const DashLayout: React.FC<DashboardProps> = (props): JSX.Element => {
               onsideBarNav={handleToggle}
               openSideBar={showSideNav}
             />
-            
           </div>
           <div className={styles["dash__content"]}>
             <DashHeader onSidebarNav={handleToggle} openSideBar={showSideNav} />
             <div
-              className="container-fluid d-flex flex-column"
-              style={{ minHeight: `calc(100vh - 130px)` }}
+              className="container-fluid d-flex flex-column mt-5 pt-2"
+              style={{ minHeight: `calc(100vh - 90px)` }}
             >
               <React.Suspense fallback="...Loading">
                 <div className="py-2 px-4">
                   <DashBreadcrumbs breadcrumb={breadcrumbNav} />
                 </div>
                 <div
-                  className={`mx-4 ${
+                  className={`mx-4 mb-3${
                     isPlainBackground === true ? `` : `bg-white`
                   } `}
                 >

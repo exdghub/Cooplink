@@ -21,10 +21,17 @@
 }
 
 .logo__sidenav{
+  span{
   transition: 0.5s all ease;
+}
 }
 
 .hamburger {
   cursor: pointer;
   transition: 0.5s all ease;
+}
+
+.sidenav-menu{
+  width: 30px;
+  background-color: #f7f7f7;
 }

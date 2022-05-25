@@ -47,3 +47,19 @@
 .custom-tblHeader{
   font-weight: 500 !important;
 }
+
+input{
+  outline: 0 !important;
+  border-color: initial ;
+  box-shadow: none !important;
+}
+
+input [type="radio"]{
+  border-color: #00C851;
+  background-color: #00C851;
+}
+
+input[type="radio"]:checked{
+  display: inline-block;
+  // @include bgcolor-green();
+}

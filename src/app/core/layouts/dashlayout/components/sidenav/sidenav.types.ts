@@ -1,5 +1,6 @@
 export interface SideNavProps {
   openSideBar?: boolean;
+  toggleDropdown?: boolean;
   onsideBarNav?:() => void;
   menu?: {
     type?: string; // "single" | "nested"

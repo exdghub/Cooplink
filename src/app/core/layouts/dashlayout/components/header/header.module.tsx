@@ -8,6 +8,7 @@ import Logo from "shared/components/logo/logo.component";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 import { useEffect } from "react";
+import styles from "./header.module.scss"
 
 const DashHeader = (props: DashHeaderProps) => {
   const { onSidebarNav, openSideBar } = props;
@@ -31,17 +32,17 @@ const DashHeader = (props: DashHeaderProps) => {
 
   const auth = useAuth();
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-white py-2 px-4">
-     
-      {width <821 &&(
-        <FontAwesomeIcon
-        icon={faBars}
-        className="pr-2"
-        role={"button"}
-        onClick={onSidebarNav}
-        />
-      )}
-      {/* {!openSideBar ? (
+    <nav className={`navbar navbar-expand-lg navbar-light bg-white py-2 px-4 ${styles["custom-header"]}`}>
+      <div>
+        {width < 821 && (
+          <FontAwesomeIcon
+            icon={faBars}
+            className="pr-2"
+            role={"button"}
+            onClick={onSidebarNav}
+          />
+        )}
+        {/* {!openSideBar ? (
         <FontAwesomeIcon
           icon={faBars}
           className="pr-2"
@@ -52,20 +53,26 @@ const DashHeader = (props: DashHeaderProps) => {
         ""
       )} */}
 
-      {/* <DrawerMenu>
+        {/* <DrawerMenu>
           children
         </DrawerMenu> */}
 
-      <NavLink to="/dashboard" className="navbar-brand">
-        {!openSideBar ? (
-          <>
-            <Logo /> | Infodevelopers{" "}
-          </>
-        ) : (
-          "Infodevelopers"
-        )}
-      </NavLink>
-      <div className="ml-auto d-flex align-items-center text-right">
+        <NavLink to="/dashboard" className="navbar-brand">
+          {!openSideBar ? (
+            <>
+              {width < 540 && <Logo />}
+              {width > 540 && (
+                <>
+                  <Logo /> | Infodevelopers
+                </>
+              )}
+            </>
+          ) : (
+            "Infodevelopers"
+          )}
+        </NavLink>
+      </div>
+      <div className={`d-flex align-items-center text-right position-absolute ${styles["custom-header-right"]}`}>
         <span>
           <span className="text-capitalize secondary-text"> {auth.user}</span>{" "}
           <br />

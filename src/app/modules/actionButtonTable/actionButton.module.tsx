@@ -18,7 +18,7 @@ export default function ActionButtonTable() {
   return (
     <div className="d-flex bg-white dash-outlet py-5 flex-column mb-4">
       <h5 className="px-5 pb-3">Results</h5>
-      <div className="row bg-main px-5 py-3 align-items-center justify-content-between">
+      <div className="row bg-main px-5 py-3 align-items-center justify-content-between mb-3">
         <div className="col-6 col-md-4">
           <form>
             <CoopSearchInput />
@@ -31,6 +31,7 @@ export default function ActionButtonTable() {
             className="button-small secondary-text"
             hasIcon1
             icon1={faAdd}
+            onClick={() => navigate("/action-button-table/add-user")}
           />
         </div>
       </div>

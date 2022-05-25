@@ -1,4 +1,9 @@
-import { faStar, faAngleDown } from "@fortawesome/free-solid-svg-icons";
+import {
+  faStar,
+  faAngleDown,
+  faAngleUp,
+  faL,
+} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
@@ -8,59 +13,14 @@ import styles from "./sidenav.module.scss";
 import Logo from "shared/components/logo/logo.component";
 
 const SideNav = (props: SideNavProps) => {
-  const { menu, openSideBar, onsideBarNav } = props;
+  const { menu, openSideBar, onsideBarNav, toggleDropdown } = props;
   console.log("openSideBar", openSideBar);
-  const [mobileView, setMobileView] = useState(false);
-  const [tabView, setTabView] = useState(false);
   const [showSideBar, setShowSideBar] = useState(false);
+  const [isToggleMenu, setIsToggleMenu] = useState(false);
 
-  // For the responsive sidebar
-  const updateViewState = () => {
-    // For tablet view
-    if (!mobileView && document.documentElement.clientWidth < 820) {
-      setMobileView(true);
-      setShowSideBar(false);
-    }
-    // For mobile view
-    else if (!tabView && document.documentElement.clientWidth < 540) {
-      setMobileView(false);
-      setShowSideBar(true);
-    }
-    // default
-    else {
-      setMobileView(false);
-      setTabView(false);
-      setShowSideBar(true);
-    }
+  const onToggle = () => {
+    setIsToggleMenu(!isToggleMenu);
   };
-
-  useEffect(() => {
-    updateViewState();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
-  // Check for the responsive side bar
-  useEffect(() => {
-    //will be called on component mount
-    window.addEventListener("resize", updateViewState);
-
-    // returned function will be called on component unmount
-    return () => {
-      window.removeEventListener("resize", updateViewState);
-    };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
-  // Toggle the side nav based on viewport size
-  const toggleSideNav = () => {
-    // if (mobileView) {
-    // }
-    setShowSideBar(!showSideBar);
-    console.log("toggle-----", showSideBar);
-  };
-
-  console.log("mobile view", mobileView);
-  // ${showSideBar? "": `${styles["custom-sidebar"]}`}
 
   return (
     <div
@@ -80,13 +40,11 @@ const SideNav = (props: SideNavProps) => {
           </>
         ) : (
           <>
-            
-              <FontAwesomeIcon
-                icon={faBars}
-                className={`${styles["hamburger"]} pt-2`}
-                onClick={onsideBarNav}
-              />
-            
+            <FontAwesomeIcon
+              icon={faBars}
+              className={`${styles["hamburger"]} pt-2`}
+              onClick={onsideBarNav}
+            />
           </>
         )}
       </div>
@@ -104,7 +62,7 @@ const SideNav = (props: SideNavProps) => {
                     >
                       <FontAwesomeIcon icon={item.img} />
                       {/* <img src={item.img} alt={item.name} /> */}
-                      <span className="ms-1 d-none d-sm-inline">
+                      <span className="ms-1 d-sm-inline">
                         {openSideBar ? item.name : ""}
                       </span>
                     </div>
@@ -116,11 +74,11 @@ const SideNav = (props: SideNavProps) => {
               {item.type === "nested" && (
                 <div className="">
                   {openSideBar ? (
-                    <li className="nav-item d-none d-sm-block">
+                    <li className="nav-item d-sm-block">
                       <div
                         className={`nav-link align-middle px-0 ${styles["side-nav-link"]}`}
                       >
-                        <span className="ms-1 text-uppercase d-none d-sm-inline">
+                        <span className="ms-1 text-uppercase d-sm-inline">
                           {item.title}
                         </span>
                       </div>
@@ -146,7 +104,7 @@ const SideNav = (props: SideNavProps) => {
                               >
                                 <FontAwesomeIcon icon={child.img} />
                                 {/* <img src={child.img} alt={child.name} /> */}
-                                <span className="ms-1 d-none d-sm-inline">
+                                <span className="ms-1 d-sm-inline">
                                   {openSideBar ? child.name : ""}
                                 </span>
                               </div>
@@ -160,17 +118,18 @@ const SideNav = (props: SideNavProps) => {
                             {/* Dropdown parent */}
                             <a
                               href={`#${child.id}`}
-                              data-bs-toggle="collapse"
+                              data-bs-toggle={"collapse"}
                               className={`nav-link px-0 align-middle d-flex  ${
                                 openSideBar
                                   ? "justify-content-between"
                                   : "align-items-center"
                               } ${styles["side-nav-link"]}`}
+                              onClick={onToggle}
                             >
                               <span>
                                 <FontAwesomeIcon icon={child.img} />
                                 {openSideBar ? (
-                                  <span className="ms-1 d-none d-sm-inline">
+                                  <span className="ms-1 d-sm-inline">
                                     {child.parent}
                                   </span>
                                 ) : (
@@ -178,13 +137,16 @@ const SideNav = (props: SideNavProps) => {
                                 )}
                               </span>
                               <span className="mr-0 pl-1">
-                                {" "}
-                                <FontAwesomeIcon icon={faAngleDown} />
+                                <FontAwesomeIcon
+                                  icon={child.id && isToggleMenu? faAngleDown : faAngleUp}
+                                />
                               </span>
                             </a>
                             {/* Dropdown items */}
                             <ul
-                              className="collapse show nav flex-column ms-1"
+                              className={`collapse show nav flex-column ms-1 ${
+                                openSideBar ? "" : `${styles["sidenav-menu"]}`
+                              }`}
                               id={child.id}
                               data-bs-parent="#menu"
                             >
@@ -205,7 +167,7 @@ const SideNav = (props: SideNavProps) => {
                                         >
                                           <FontAwesomeIcon icon={faStar} />
                                           {/* <img src={subitem.img} alt={subitem.name} /> */}
-                                          <span className="ms-1 d-none d-sm-inline">
+                                          <span className="ms-1 d-sm-inline">
                                             {openSideBar ? subitem.name : ""}
                                           </span>
                                         </div>
