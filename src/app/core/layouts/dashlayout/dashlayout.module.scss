@@ -11,7 +11,7 @@
     width: 230px;
     // position: fixed;
     height: 100vh;
-    z-index: 1;
+    z-index: 2;
     top: 0;
     left: 0;
     background-color: $colorWhite;
@@ -41,7 +41,6 @@
   transition: 0.5s all ease;
 }
 
-
 .mobile-sidenav{
   width: 0;
 }
@@ -53,12 +52,9 @@
   }
   .dash__sidenav {
     position: fixed;
-    transition: 0.5s all ease;
-    
+    transition: 0.5s all ease;   
   }
-  
 }  
-
 
 .dash__sidenav::-webkit-scrollbar{
   display: none;

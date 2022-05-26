@@ -1,4 +1,5 @@
 @import "../abstracts/mixins";
+@import "../abstracts/variables";
 
 .form-text {
   position: absolute;
@@ -54,12 +55,17 @@ input{
   box-shadow: none !important;
 }
 
-input [type="radio"]{
-  border-color: #00C851;
-  background-color: #00C851;
+input[type='radio']{
+  accent-color: $colorPrimary;
 }
 
-input[type="radio"]:checked{
-  display: inline-block;
-  // @include bgcolor-green();
+.checkbox:checked::before{
+  background-color: $colorPrimary !important;
+}
+
+input[type="file"] {
+  border-style: dashed;
+  border-radius: 8px;
+  border: 2px dashed #bbb;
+
 }

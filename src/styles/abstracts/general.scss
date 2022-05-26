@@ -43,7 +43,7 @@
 .bg-login {
   @include bg-login();
 }
-.button-paginate{
+.button-paginate {
   @include button-paginate();
 }
 
@@ -127,10 +127,10 @@
 .bg-grey {
   @include body-bg();
 }
-.bg-main{
+.bg-main {
   @include bgcolor-main();
 }
-.dash-outlet{
+.dash-outlet {
   @include dash__outlet();
 }
 
@@ -156,3 +156,7 @@
   background: #666;
 }
 
+a[class="active" ] {
+  color: $colorPrimary !important;
+  background-color: $colorLightPrimary !important;
+}

@@ -1,11 +1,11 @@
-@import "styles/abstracts/variables";
+@import "styles/abstracts/_variables.scss";
 
 .side-nav {
   text-decoration: none;
   width: 100%;
   transition: 0.5s all ease;
 }
-.custom-sidebar{
+.custom-sidebar {
   width: 60px;
 }
 .side-nav-link {
@@ -13,17 +13,30 @@
   transition: 0.5s all ease;
   &:hover {
     color: $colorPrimary !important;
-    text-decoration: none;
   }
-  &:active{
-    background-color: $colorLightPrimary;
+  // &:active {
+  //   color: $colorPrimary !important;
+  //   background-color: $colorLightPrimary !important;
+  // }
+
+  .arrow-icon {
+    transition: all 0.5s;
+    transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+  }
+  &:global(.collapsed) {
+    .arrow-icon {
+      transition: all 0.5s;
+      transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+      -webkit-transform: rotate(0deg);
+    }
   }
 }
 
-.logo__sidenav{
-  span{
+.logo__sidenav {
   transition: 0.5s all ease;
-}
 }
 
 .hamburger {
@@ -31,7 +44,25 @@
   transition: 0.5s all ease;
 }
 
-.sidenav-menu{
+.sidenav-menu {
   width: 30px;
   background-color: #f7f7f7;
+}
+
+a {
+  &:hover {
+    text-decoration: none !important;
+  }
+}
+
+.side-nav {
+  &:global(.active) {
+    background-color: aquamarine !important;
+  }
+}
+
+.side-nav-link {
+  span {
+    transition: 0.5s all ease;
+  }
 }

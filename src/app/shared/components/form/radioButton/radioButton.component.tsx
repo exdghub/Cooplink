@@ -8,27 +8,27 @@ export default function CoopRadioButton(props: RadioButtonProps) {
       <div className="">
         <label className="form-label px-2 secondary-text" >{label}</label>
         <div className="d-flex ">
-          <div className="form-check form-check-inline d-flex align-items-center ">
+          <div className="form-check form-check-inline d-flex m-0 p-0 align-items-center ">
             <input
-              className="form-check-input with-gap"
+              // className="form-check-input with-gap"
               type="radio"
-              name="inlineRadioOptions"
+              name="radiobtn"
               id="inlineRadio1"
               value="option1"
             />
-            <label className="form-check-label" htmlFor="inlineRadio1">
+            <label className="form-check-label pl-1" htmlFor="inlineRadio1">
               {radioLabel}
             </label>
           </div>
           <div className="form-check form-check-inline d-flex align-items-center ">
             <input
-              className=" with-gap "
+              // className=" with-gap "
               type="radio"
-              name="inlineRadioOptions"
+              name="radiobtn"
               id="inlineRadio2"
               value="option2"
             />
-            <label className="form-check-label" htmlFor="inlineRadio2">
+            <label className="form-check-label pl-1" htmlFor="inlineRadio2">
             {radioLabel2}
             </label>
           </div>

@@ -3,6 +3,7 @@ import {
   faAngleDown,
   faAngleUp,
   faL,
+  faExpand,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useEffect, useState } from "react";
@@ -16,24 +17,19 @@ const SideNav = (props: SideNavProps) => {
   const { menu, openSideBar, onsideBarNav, toggleDropdown } = props;
   console.log("openSideBar", openSideBar);
   const [showSideBar, setShowSideBar] = useState(false);
-  const [isToggleMenu, setIsToggleMenu] = useState(false);
-
-  const onToggle = () => {
-    setIsToggleMenu(!isToggleMenu);
-  };
 
   return (
     <div
-      className={`d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100 `}
+      className={`d-flex flex-column align-items-center align-items-sm-start px-0 pt-2 text-white min-vh-100 custom-sidenav`}
     >
-      <div className="d-flex align-items-center justify-content-between w-100 pb-3 mb-md-0 me-md-auto text-dark ">
+      <div className="d-flex align-items-center justify-content-between w-100 px-3 pb-3 mb-md-0 me-md-auto text-dark ">
         {openSideBar ? (
           <>
             <span className={`fs-5 ${styles["logo__sidenav"]}`}>
               <Logo />
             </span>
             <FontAwesomeIcon
-              icon={faBars}
+              icon={faExpand}
               className={styles["hamburger"]}
               onClick={onsideBarNav}
             />
@@ -56,13 +52,12 @@ const SideNav = (props: SideNavProps) => {
               {/* For single item  */}
               {item.type === "single" && (
                 <li className="nav-item ">
-                  <NavLink to={item.to} className={styles["side-nav"]}>
+                  <NavLink to={item.to} className={`${styles["side-nav"]} `}>
                     <div
-                      className={`nav-link align-middle px-0 ${styles["side-nav-link"]}`}
+                      className={`nav-link align-middle px-3 ${styles["side-nav-link"]}`}
                     >
                       <FontAwesomeIcon icon={item.img} />
-                      {/* <img src={item.img} alt={item.name} /> */}
-                      <span className="ms-1 d-sm-inline">
+                      <span className={`ms-1 d-sm-inline`}>
                         {openSideBar ? item.name : ""}
                       </span>
                     </div>
@@ -76,7 +71,7 @@ const SideNav = (props: SideNavProps) => {
                   {openSideBar ? (
                     <li className="nav-item d-sm-block">
                       <div
-                        className={`nav-link align-middle px-0 ${styles["side-nav-link"]}`}
+                        className={`nav-link align-middle px-3 ${styles["side-nav-link"]}`}
                       >
                         <span className="ms-1 text-uppercase d-sm-inline">
                           {item.title}
@@ -98,12 +93,11 @@ const SideNav = (props: SideNavProps) => {
                               className={styles["side-nav"]}
                             >
                               <div
-                                className={`nav-link align-middle px-0  ${
+                                className={`nav-link align-middle px-3  ${
                                   openSideBar ? "d-flex align-items-center" : ""
                                 } ${styles["side-nav-link"]}`}
                               >
                                 <FontAwesomeIcon icon={child.img} />
-                                {/* <img src={child.img} alt={child.name} /> */}
                                 <span className="ms-1 d-sm-inline">
                                   {openSideBar ? child.name : ""}
                                 </span>
@@ -119,14 +113,13 @@ const SideNav = (props: SideNavProps) => {
                             <a
                               href={`#${child.id}`}
                               data-bs-toggle={"collapse"}
-                              className={`nav-link px-0 align-middle d-flex  ${
+                              className={`nav-link px-3 align-middle d-flex collapsed ${
                                 openSideBar
-                                  ? "justify-content-between"
+                                  ? "justify-content-between " 
                                   : "align-items-center"
                               } ${styles["side-nav-link"]}`}
-                              onClick={onToggle}
                             >
-                              <span>
+                              <span className="pr-1">
                                 <FontAwesomeIcon icon={child.img} />
                                 {openSideBar ? (
                                   <span className="ms-1 d-sm-inline">
@@ -136,15 +129,15 @@ const SideNav = (props: SideNavProps) => {
                                   ""
                                 )}
                               </span>
-                              <span className="mr-0 pl-1">
-                                <FontAwesomeIcon
-                                  icon={child.id && isToggleMenu? faAngleDown : faAngleUp}
-                                />
+                              <span
+                                className={`mr-0 ${styles["arrow-icon"]}`}
+                              >
+                                <FontAwesomeIcon icon={faAngleDown} />
                               </span>
                             </a>
                             {/* Dropdown items */}
                             <ul
-                              className={`collapse show nav flex-column ms-1 ${
+                              className={`collapse nav flex-column ms-4 ${
                                 openSideBar ? "" : `${styles["sidenav-menu"]}`
                               }`}
                               id={child.id}

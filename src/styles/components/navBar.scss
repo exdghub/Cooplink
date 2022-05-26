@@ -12,3 +12,9 @@
   @include custom-navlink();
   @include fw-600();
 }
+
+
+.side-nav.active{
+  @include bgcolor-green();
+  @include fw-600();
+}

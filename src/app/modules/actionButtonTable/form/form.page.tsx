@@ -2,6 +2,7 @@ import { useBreadcrumbs } from "core/layouts/dashlayout/dashlayout";
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import CoopButton from "shared/components/form/button/button.component";
+import CoopFileInput from "shared/components/form/fileInput/fileInput.component";
 import CoopInput from "shared/components/form/input/input.component";
 import CoopRadioButton from "shared/components/form/radioButton/radioButton.component";
 import CoopSelect from "shared/components/form/select/select.component";
@@ -34,7 +35,7 @@ export default function ActionAddUser() {
         </div>
 
         <div className="col-12 col-lg-5">
-          <CoopInput label="Remarks" placeholder="Write down remarks" />
+          <CoopFileInput label="Profile Image"/>
         </div>
         <div className="col-12 col-lg-5">
           <CoopRadioButton label="Is this Primary User?" radioLabel="Yes" radioLabel2="No"/>

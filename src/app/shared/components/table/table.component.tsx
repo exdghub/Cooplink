@@ -6,12 +6,14 @@ import React from "react";
 import CoopButton from "../form/button/button.component";
 import { tableList } from "./table.data";
 import { tableHeaderList } from "./tableHeaderList.data";
+import styles from "./table.module.scss"; 
 
 export default function TableComp() {
   return (
-    <div className="">
+    <>
+    <div className={`${styles["custom-table"]}`}>
       <table
-        className="table table-reponsive"
+        className={`table table-reponsive `}
         data-bs-show-header="true"
         data-bs-pagination="true"
         data-bs-id-field="name"
@@ -49,7 +51,9 @@ export default function TableComp() {
           ))}
         </tbody>
       </table>
-      <div className="d-flex justify-content-between px-5">
+      
+    </div>
+    <div className="d-flex justify-content-between px-5">
         <p className="m-0 secondary-text">Showing 1 to 10 of 32 entries</p>
         <div className="d-flex">
           <CoopButton
@@ -69,6 +73,6 @@ export default function TableComp() {
           />
         </div>
       </div>
-    </div>
+    </>
   );
 }

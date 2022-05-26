@@ -1,0 +1,10 @@
+
+
+.custom-table{
+    overflow: hidden !important;
+    overflow-x: scroll !important;
+}
+
+.custom-table::-webkit-scrollbar{
+    display: none;
+}

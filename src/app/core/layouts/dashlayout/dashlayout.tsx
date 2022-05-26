@@ -54,7 +54,6 @@ const DashLayout: React.FC<DashboardProps> = (props): JSX.Element => {
 
   function handleSideNavToggle() {
     setWidth(width)
-    
   }
 
   // If user is not logged in then navigate to the home page
@@ -85,7 +84,7 @@ const DashLayout: React.FC<DashboardProps> = (props): JSX.Element => {
           <div className={styles["dash__content"]}>
             <DashHeader onSidebarNav={handleToggle} openSideBar={showSideNav} />
             <div
-              className="container-fluid d-flex flex-column mt-5 pt-2"
+              className="container-sm-fluid d-flex flex-column mt-5 pt-2 pl-sm-2"
               style={{ minHeight: `calc(100vh - 90px)` }}
             >
               <React.Suspense fallback="...Loading">
@@ -93,7 +92,7 @@ const DashLayout: React.FC<DashboardProps> = (props): JSX.Element => {
                   <DashBreadcrumbs breadcrumb={breadcrumbNav} />
                 </div>
                 <div
-                  className={`mx-4 mb-3${
+                  className={`mx-0 mx-sm-4 mb-3${
                     isPlainBackground === true ? `` : `bg-white`
                   } `}
                 >

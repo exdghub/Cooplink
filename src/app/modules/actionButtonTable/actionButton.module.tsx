@@ -35,8 +35,9 @@ export default function ActionButtonTable() {
           />
         </div>
       </div>
-      
+      <div className="px-5">
         <TableComp />
+      </div>
       
     </div>
   );
