@@ -14,11 +14,6 @@
   &:hover {
     color: $colorPrimary !important;
   }
-  // &:active {
-  //   color: $colorPrimary !important;
-  //   background-color: $colorLightPrimary !important;
-  // }
-
   .arrow-icon {
     transition: all 0.5s;
     transform: rotate(180deg);
@@ -57,6 +52,7 @@ a {
 
 .side-nav {
   &:global(.active) {
+    color: $colorPrimary !important;
     background-color: aquamarine !important;
   }
 }
@@ -64,5 +60,9 @@ a {
 .side-nav-link {
   span {
     transition: 0.5s all ease;
+    line-height: 2;
   }
 }
+
+
+

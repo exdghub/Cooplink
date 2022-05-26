@@ -52,12 +52,12 @@ const SideNav = (props: SideNavProps) => {
               {/* For single item  */}
               {item.type === "single" && (
                 <li className="nav-item ">
-                  <NavLink to={item.to} className={`${styles["side-nav"]} `}>
+                  <NavLink to={item.to} className={`${styles["side-nav"]}`}>
                     <div
-                      className={`nav-link align-middle px-3 ${styles["side-nav-link"]}`}
+                      className={`nav-link align-middle px-3 ${styles["side-nav-link"]} `}
                     >
                       <FontAwesomeIcon icon={item.img} />
-                      <span className={`ms-1 d-sm-inline`}>
+                      <span className={`ms-2 d-sm-inline fw-600 `}>
                         {openSideBar ? item.name : ""}
                       </span>
                     </div>
@@ -73,7 +73,7 @@ const SideNav = (props: SideNavProps) => {
                       <div
                         className={`nav-link align-middle px-3 ${styles["side-nav-link"]}`}
                       >
-                        <span className="ms-1 text-uppercase d-sm-inline">
+                        <span className="ms-2 text-uppercase d-sm-inline fw-600 ">
                           {item.title}
                         </span>
                       </div>
@@ -98,7 +98,7 @@ const SideNav = (props: SideNavProps) => {
                                 } ${styles["side-nav-link"]}`}
                               >
                                 <FontAwesomeIcon icon={child.img} />
-                                <span className="ms-1 d-sm-inline">
+                                <span className="ms-2 d-sm-inline fw-600 line-height-lg">
                                   {openSideBar ? child.name : ""}
                                 </span>
                               </div>
@@ -115,23 +115,21 @@ const SideNav = (props: SideNavProps) => {
                               data-bs-toggle={"collapse"}
                               className={`nav-link px-3 align-middle d-flex collapsed ${
                                 openSideBar
-                                  ? "justify-content-between " 
+                                  ? "justify-content-between "
                                   : "align-items-center"
                               } ${styles["side-nav-link"]}`}
                             >
                               <span className="pr-1">
                                 <FontAwesomeIcon icon={child.img} />
                                 {openSideBar ? (
-                                  <span className="ms-1 d-sm-inline">
+                                  <span className="ms-2 d-sm-inline fw-600 ">
                                     {child.parent}
                                   </span>
                                 ) : (
                                   ""
                                 )}
                               </span>
-                              <span
-                                className={`mr-0 ${styles["arrow-icon"]}`}
-                              >
+                              <span className={`mr-0 ${styles["arrow-icon"]}`}>
                                 <FontAwesomeIcon icon={faAngleDown} />
                               </span>
                             </a>
@@ -152,7 +150,7 @@ const SideNav = (props: SideNavProps) => {
                                         className={styles["side-nav"]}
                                       >
                                         <div
-                                          className={`nav-link pl-sm-1 d-flex ${
+                                          className={`nav-link pl-sm-1 d-flex align-items-center ${
                                             openSideBar
                                               ? "pl-md-4 "
                                               : "pl-md-1 "
@@ -160,7 +158,7 @@ const SideNav = (props: SideNavProps) => {
                                         >
                                           <FontAwesomeIcon icon={faStar} />
                                           {/* <img src={subitem.img} alt={subitem.name} /> */}
-                                          <span className="ms-1 d-sm-inline">
+                                          <span className="ms-2 d-sm-inline fw-600">
                                             {openSideBar ? subitem.name : ""}
                                           </span>
                                         </div>

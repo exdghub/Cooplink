@@ -10,7 +10,7 @@ const TransactionReportResult = () => {
   return (
     <div className="d-flex bg-white dash-outlet py-5 flex-column">
       <h5 className="px-5 pb-3">Results</h5>
-      <div className="row bg-main px-5 py-3 align-items-center justify-content-between mb-3">
+      <div className="row bg-main px-5 py-3 align-items-center justify-content-between mb-4">
         <div className="col-6 col-md-4">
           <form>
             <CoopSearchInput />
@@ -18,10 +18,17 @@ const TransactionReportResult = () => {
         </div>
         <div className="col-6 col-md-4 d-flex justify-content-between">
           <CoopFilterSelect label="Show: " className="" />
-          <CoopButton btnName="Add" className="button-small secondary-text" hasIcon1 icon1={faAdd}/>
-        </div>  
+          <CoopButton
+            btnName="Add"
+            className="button-small secondary-text"
+            hasIcon1
+            icon1={faAdd}
+          />
+        </div>
       </div>
-      <TableComp/>
+      <div className="px-5">
+        <TableComp />
+      </div>
     </div>
   );
 };
